@@ -212,7 +212,7 @@ final class ChatsInteractor: NSObject {
             } else if let paymentRequest = sofaWrapper as? SofaPaymentRequest {
                 message.messageType = "Actionable"
                 message.title = "Payment request"
-                message.attributedSubtitle = EthereumConverter.balanceAttributedString(forWei: paymentRequest.value, exchangeRate: ExchangeRateClient.exchangeRate)
+                message.attributedSubtitle = EthereumConverter.balanceAttributedString(forWei:  .value, exchangeRate: ExchangeRateClient.exchangeRate)
             } else if let payment = sofaWrapper as? SofaPayment {
                 output?.didFinishRequest()
                 message.messageType = "Actionable"

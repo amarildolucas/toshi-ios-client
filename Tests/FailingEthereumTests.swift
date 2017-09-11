@@ -12,7 +12,7 @@ class FailingEthereumConverterTests: QuickSpec {
         describe("the Ethereum Converter") {
             context("overflowing tests") {
 
-                for i in 0...1000 {
+                for i in 0...10000 {
                     var randomDecimalPart1 = Decimal(arc4random_uniform(1000000000))
                     let randomDecimalPart2 = Decimal(arc4random_uniform(1000000000))
                     let randomDecimalPart3 = Decimal(arc4random_uniform(arc4random_uniform(10000)))
