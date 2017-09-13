@@ -58,7 +58,7 @@ class OfflineAlertView: UIView {
         addSubview(textLabel)
         textLabel.edges(to: self, insets: UIEdgeInsets(top: margin, left: margin, bottom: -margin, right: -margin), priority: .high)
 
-        heightConstraint = heightAnchor.constraint(equalToConstant: 20)
+        heightConstraint = heightAnchor.constraint(equalToConstant: 0)
         heightConstraint?.isActive = true
     }
 }
