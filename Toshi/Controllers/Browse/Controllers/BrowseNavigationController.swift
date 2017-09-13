@@ -15,7 +15,7 @@
 
 import UIKit
 
-public class BrowseNavigationController: UINavigationController {
+public class BrowseNavigationController: NavigationController {
 
     static let selectedAppKey = "Restoration::SelectedApp"
 
