@@ -141,3 +141,5 @@
 
 "report_feedback_alert_title" = "Thanks";
 "report_feedback_alert_message" = "Your feedback is important in helping us keep the Token community safe.";
+
+"offline_alert_message" = "No internet connection";

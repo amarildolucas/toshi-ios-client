@@ -46,8 +46,8 @@ extension NavigationController: OfflineAlertDisplaying {
     }
 
     var offlineAlertViewConstraints: [NSLayoutConstraint] {
-        return [offlineAlertView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor),
-                offlineAlertView.leftAnchor.constraint(equalTo: navigationBar.leftAnchor),
-                offlineAlertView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor)]
+        return [offlineAlertView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor),
+                offlineAlertView.leftAnchor.constraint(equalTo: view.leftAnchor),
+                offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
     }
 }

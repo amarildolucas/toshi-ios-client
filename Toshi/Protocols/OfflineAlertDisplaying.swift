@@ -33,7 +33,7 @@ extension OfflineAlertDisplaying where Self: UINavigationController {
     func setupOfflineAlertView(hidden: Bool = false) {
         guard let offlineAlertView = self.offlineAlertView as OfflineAlertView? else { return }
 
-        navigationBar.addSubview(offlineAlertView)
+        view.addSubview(offlineAlertView)
         NSLayoutConstraint.activate(offlineAlertViewConstraints)
 
         if !hidden {
@@ -63,8 +63,9 @@ extension OfflineAlertDisplaying where Self: UINavigationController {
     }
 
     func requestLayoutUpdate() {
+
         UIView.animate(withDuration: 0.2) {
-            self.navigationBar.layoutIfNeeded()
+            self.view.layoutIfNeeded()
         }
     }
 }
