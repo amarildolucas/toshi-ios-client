@@ -1838,6 +1838,7 @@
 		D197B6CAA22DFAA0B0FFE15D /* sendSignedTransaction.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B654F730E653B7C6F444 /* sendSignedTransaction.json */; };
 		D197B6D91E419A23890C7E8B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BB4FC8D408B73FE253E5 /* BlurView.swift */; };
 		D197B74275EBC3A229F0D4D9 /* timestamp.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B5835BCEB0D7A2DA6967 /* timestamp.json */; };
+		D197B7AB167F98492E93A3D1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B4CC71953C367E54D52F /* Reachability.swift */; };
 		D197B7D3D6233CFCCC40FE49 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B252A6962A3B8E066178 /* NavigationController.swift */; };
 		D197B80A67FA2271BE1C9621 /* YapDatabaseViewConnection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B494213B9F6EC5413D88 /* YapDatabaseViewConnection+Additions.swift */; };
 		D197B83F0A9396CF2E7628D5 /* ActiveNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B6E47F5F979A8C154E9A /* ActiveNetworkView.swift */; };
@@ -1850,13 +1851,16 @@
 		D197BA0569377AF2E56C7393 /* getFeaturedApps.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B86A198E11D1255A9721 /* getFeaturedApps.json */; };
 		D197BA0C5CF10DECCC00E7B3 /* OfflineAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BCDDA5496DF9DADA127C /* OfflineAlertView.swift */; };
 		D197BA6E5DC09E84D524D1A2 /* getBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B003D276C7AD76B6A223 /* getBalance.json */; };
+		D197BAC43748D961A33355FA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B4CC71953C367E54D52F /* Reachability.swift */; };
 		D197BB5265BB1DA3032B68AA /* ExchangeRateAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BDA113837D7DCFE1A66F /* ExchangeRateAPIClientTests.swift */; };
+		D197BC097FF51FA38A1FE701 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B4CC71953C367E54D52F /* Reachability.swift */; };
 		D197BC32BA4D952C0E815F18 /* ActiveNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B6E47F5F979A8C154E9A /* ActiveNetworkView.swift */; };
 		D197BD8E4D43B3EFF276694E /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D197BD2C5E7FC428D7ADB559 /* TestAppDelegate.m */; };
 		D197BE657B8594BC2783EAB9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B252A6962A3B8E066178 /* NavigationController.swift */; };
 		D197BE71058CA3432F48BF1C /* AppsAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B00DD27312EDFE1B9ECB /* AppsAPIClientTests.swift */; };
 		D197BE886E4731A7175FC7E6 /* OfflineAlertDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BCCB111F2E44FAD1EC6B /* OfflineAlertDisplaying.swift */; };
 		D197BEB965F76FE14EF90555 /* ActiveNetworkDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BAEA583CAF9862D17B38 /* ActiveNetworkDisplaying.swift */; };
+		D197BFBCDC1222BDB867EE38 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B4CC71953C367E54D52F /* Reachability.swift */; };
 		E1A95D551E6EF092002762DA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A95D541E6EF092002762DA /* SettingsController.swift */; };
 		E60A52A51F28DB710032CAC0 /* AppsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143186B81E49C4EA0025E9B7 /* AppsAPIClient.swift */; };
 		E60A52A61F28DC010032CAC0 /* CacheExpiry+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48C1561E9CD911008BA637 /* CacheExpiry+Default.swift */; };
@@ -1869,6 +1873,9 @@
 		E60A52AF1F28E6A60032CAC0 /* EthereumAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145666051E30D31A00E52027 /* EthereumAPIClient.swift */; };
 		E60A52B01F28E6FF0032CAC0 /* NetworkSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B002D8E1F17BA1800D92240 /* NetworkSwitcher.swift */; };
 		E60A52B11F28E7830032CAC0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9202E561ED84F6A0036E9B7 /* Extensions.swift */; };
+		E61023F91F69AA2A00616284 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61023F81F69AA2A00616284 /* Reachability.framework */; };
+		E61023FA1F69AA3700616284 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61023F81F69AA2A00616284 /* Reachability.framework */; };
+		E61023FB1F69AA3E00616284 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61023F81F69AA2A00616284 /* Reachability.framework */; };
 		E67683561F4464980014B2D4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67683551F4464980014B2D4 /* Quick.framework */; };
 		E67683571F44649F0014B2D4 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E67683551F4464980014B2D4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E67683591F44673E0014B2D4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67683581F44673E0014B2D4 /* Nimble.framework */; };
@@ -2949,6 +2956,7 @@
 		D197B3AC0E3346D86F7A4559 /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
 		D197B4747DA95DF531E0C300 /* searchContacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchContacts.json; sourceTree = "<group>"; };
 		D197B494213B9F6EC5413D88 /* YapDatabaseViewConnection+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YapDatabaseViewConnection+Additions.swift"; sourceTree = "<group>"; };
+		D197B4CC71953C367E54D52F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D197B5835BCEB0D7A2DA6967 /* timestamp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = timestamp.json; path = Tests/Mocks/timestamp.json; sourceTree = SOURCE_ROOT; };
 		D197B654F730E653B7C6F444 /* sendSignedTransaction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sendSignedTransaction.json; sourceTree = "<group>"; };
 		D197B669EF87D9D6642E12BA /* UINotificationName+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINotificationName+Additions.swift"; sourceTree = "<group>"; };
@@ -2970,6 +2978,7 @@
 		D197BDA113837D7DCFE1A66F /* ExchangeRateAPIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateAPIClientTests.swift; sourceTree = "<group>"; };
 		D197BF349118AC9D1FE859C4 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		E1A95D541E6EF092002762DA /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		E61023F81F69AA2A00616284 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		E67683551F4464980014B2D4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		E67683581F44673E0014B2D4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E6B857791F25F3D700979650 /* AddressChangeAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressChangeAlertController.swift; sourceTree = "<group>"; };
@@ -3021,6 +3030,7 @@
 				9FF957921EEEB7BA00DDCBD8 /* KeychainSwift.framework in Frameworks */,
 				9FF957931EEEB7BA00DDCBD8 /* SweetFoundation.framework in Frameworks */,
 				9FF957941EEEB7BA00DDCBD8 /* AwesomeCache.framework in Frameworks */,
+				E61023FB1F69AA3E00616284 /* Reachability.framework in Frameworks */,
 				9FF957951EEEB7BA00DDCBD8 /* HPGrowingTextView.framework in Frameworks */,
 				9FF957961EEEB7BA00DDCBD8 /* TinyConstraints.framework in Frameworks */,
 				9FF957981EEEB7BA00DDCBD8 /* SweetUIKit.framework in Frameworks */,
@@ -3067,6 +3077,7 @@
 				9F3FF8141EB36A7F002D0293 /* CameraScanner.framework in Frameworks */,
 				9FA12BE81E65A116003705F6 /* RevealServer.framework in Frameworks */,
 				9F3FF8161EB36A7F002D0293 /* EtherealCereal.framework in Frameworks */,
+				E61023FA1F69AA3700616284 /* Reachability.framework in Frameworks */,
 				9F3FF82E1EB36A7F002D0293 /* WebRTC.framework in Frameworks */,
 				9F3FF8201EB36A7F002D0293 /* KeychainSwift.framework in Frameworks */,
 				9F3FF8261EB36A7F002D0293 /* SweetFoundation.framework in Frameworks */,
@@ -3117,6 +3128,7 @@
 				A9603F4F1F4DABDC00BF57B1 /* CameraScanner.framework in Frameworks */,
 				A9603F501F4DABDC00BF57B1 /* EtherealCereal.framework in Frameworks */,
 				A9603F511F4DABDC00BF57B1 /* WebRTC.framework in Frameworks */,
+				E61023F91F69AA2A00616284 /* Reachability.framework in Frameworks */,
 				A9603F521F4DABDC00BF57B1 /* KeychainSwift.framework in Frameworks */,
 				A9603F531F4DABDC00BF57B1 /* SweetFoundation.framework in Frameworks */,
 				A9603F541F4DABDC00BF57B1 /* AwesomeCache.framework in Frameworks */,
@@ -3204,6 +3216,7 @@
 		27842ECF00E36BC79A5918DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E61023F81F69AA2A00616284 /* Reachability.framework */,
 				E67683581F44673E0014B2D4 /* Nimble.framework */,
 				E67683551F4464980014B2D4 /* Quick.framework */,
 				2BAB90C91EC120A8005D98C6 /* libc++.tbd */,
@@ -4195,6 +4208,7 @@
 				9F9238B41E24F1D2004BEEE0 /* Supporting Files */,
 				9FCDBAE81E28FD5600A70E07 /* Theme */,
 				9F9238CE1E24F3EB004BEEE0 /* Views */,
+				D197B4CC71953C367E54D52F /* Reachability.swift */,
 			);
 			path = Toshi;
 			sourceTree = "<group>";
@@ -5406,6 +5420,7 @@
 				D197B6C89BDD1FE57CA3DA33 /* RatingsClientTests.swift in Sources */,
 				D197B54E550A80E09BFE6501 /* RatingsClient.swift in Sources */,
 				D197BB5265BB1DA3032B68AA /* ExchangeRateAPIClientTests.swift in Sources */,
+				D197BAC43748D961A33355FA /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5928,6 +5943,7 @@
 				D197B031582D61CF47A8356E /* OfflineAlertView.swift in Sources */,
 				D197B7D3D6233CFCCC40FE49 /* NavigationController.swift in Sources */,
 				D197BE886E4731A7175FC7E6 /* OfflineAlertDisplaying.swift in Sources */,
+				D197B7AB167F98492E93A3D1 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6452,6 +6468,7 @@
 				D197BA0C5CF10DECCC00E7B3 /* OfflineAlertView.swift in Sources */,
 				D197BE657B8594BC2783EAB9 /* NavigationController.swift in Sources */,
 				D197B0698FB51D61B9266352 /* OfflineAlertDisplaying.swift in Sources */,
+				D197BFBCDC1222BDB867EE38 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6974,6 +6991,7 @@
 				D197B4766B54E8C2E37872C7 /* OfflineAlertView.swift in Sources */,
 				D197B2471FECBB1FEE4DA605 /* NavigationController.swift in Sources */,
 				D197B39471DCF0DE8A0CC1AA /* OfflineAlertDisplaying.swift in Sources */,
+				D197BC097FF51FA38A1FE701 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
