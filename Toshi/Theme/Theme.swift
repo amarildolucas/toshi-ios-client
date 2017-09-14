@@ -120,6 +120,10 @@ extension Theme {
         return UIColor(white: 0.95, alpha: 1)
     }
 
+    public static var offlineAlertBackgroundColor: UIColor {
+        return UIColor(hex: "5B5B5B")
+    }
+
     // MARK: - Message colours
 
     public static var incomingMessageBackgroundColor: UIColor {

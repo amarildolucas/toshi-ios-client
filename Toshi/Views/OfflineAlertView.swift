@@ -51,7 +51,7 @@ class OfflineAlertView: UIView {
     }
 
     func setupView() {
-        backgroundColor = UIColor.black.withAlphaComponent(0.98)
+        backgroundColor = Theme.offlineAlertBackgroundColor
 
         addSubview(textLabel)
         textLabel.edges(to: self, insets: UIEdgeInsets(top: margin, left: margin, bottom: -margin, right: -margin), priority: .high)
