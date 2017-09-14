@@ -128,7 +128,7 @@ final class SplashViewController: UIViewController {
     }
 
     @objc private func signinPressed(_: UIButton) {
-        let controller = SignInController()
+        let controller = PassphraseSignInViewController()
         Navigator.push(controller, from: self)
     }
 

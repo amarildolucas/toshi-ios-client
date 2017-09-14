@@ -1157,6 +1157,9 @@
 		A9202E6E1ED850220036E9B7 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9202E4C1ED84F6A0036E9B7 /* ImagesViewController.swift */; };
 		A9202E701ED850270036E9B7 /* ImagesViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9202E4E1ED84F6A0036E9B7 /* ImagesViewControllerTransition.swift */; };
 		A9202E721ED854010036E9B7 /* ChatInputTextPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9202E711ED854010036E9B7 /* ChatInputTextPanel.swift */; };
+		A9207AF31F6A7DE3003B79BF /* PassphraseSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9207AF11F6A7DE3003B79BF /* PassphraseSignInView.swift */; };
+		A9207AF41F6A7DE3003B79BF /* PassphraseSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9207AF21F6A7DE3003B79BF /* PassphraseSignInViewController.swift */; };
+		A9207AF71F6A8088003B79BF /* passwords-library.txt in Resources */ = {isa = PBXBuildFile; fileRef = A9207AF61F6A8088003B79BF /* passwords-library.txt */; };
 		A921D3631E7C145E00EE3221 /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921D3621E7C145E00EE3221 /* Collection+Additions.swift */; };
 		A921D3641E7C145E00EE3221 /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921D3621E7C145E00EE3221 /* Collection+Additions.swift */; };
 		A94BDE151E800EF800B2F0CF /* ConfirmationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BDE141E800EF800B2F0CF /* ConfirmationButton.swift */; };
@@ -2892,6 +2895,9 @@
 		A9202E561ED84F6A0036E9B7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A9202E571ED84F6A0036E9B7 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		A9202E711ED854010036E9B7 /* ChatInputTextPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInputTextPanel.swift; sourceTree = "<group>"; };
+		A9207AF11F6A7DE3003B79BF /* PassphraseSignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInView.swift; sourceTree = "<group>"; };
+		A9207AF21F6A7DE3003B79BF /* PassphraseSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInViewController.swift; sourceTree = "<group>"; };
+		A9207AF61F6A8088003B79BF /* passwords-library.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "passwords-library.txt"; sourceTree = "<group>"; };
 		A921D3621E7C145E00EE3221 /* Collection+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Additions.swift"; sourceTree = "<group>"; };
 		A94BDE141E800EF800B2F0CF /* ConfirmationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationButton.swift; sourceTree = "<group>"; };
 		A9603F951F4DABDC00BF57B1 /* Toshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4204,11 +4210,8 @@
 		9F9238CC1E24F3D9004BEEE0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2BD0AC881F278619000D2A58 /* Certificate(dis) */,
-				9FAACCD81E31120600FB871D /* SF-UI-Display */,
-				9FAACCE21E31120600FB871D /* SF-UI-Text */,
-				9FA12BEA1E65CF59003705F6 /* Sounds */,
 				9F9238C01E24F1D2004BEEE0 /* Assets.xcassets */,
+				2BD0AC881F278619000D2A58 /* Certificate(dis) */,
 				9F9238C51E24F1D2004BEEE0 /* Development.plist */,
 				14E4D8CF1E72CB6E00389DF9 /* DevelopmentTokenURLPaths.swift */,
 				142709A11E531A6100BF964B /* Distribution.plist */,
@@ -4216,7 +4219,11 @@
 				2B4BCD591F59954E00F9E609 /* DistributionDevTokenURLPaths.swift */,
 				14E4D8D11E72CB7500389DF9 /* DistributionTokenURLPaths.swift */,
 				9F9238C21E24F1D2004BEEE0 /* LaunchScreen.storyboard */,
+				A9207AF51F6A8088003B79BF /* Libraries */,
 				9FAACCB41E30F24100FB871D /* Localizable.strings */,
+				9FAACCD81E31120600FB871D /* SF-UI-Display */,
+				9FAACCE21E31120600FB871D /* SF-UI-Text */,
+				9FA12BEA1E65CF59003705F6 /* Sounds */,
 				9F9238D01E24F402004BEEE0 /* Toshi-Bridging-Header.h */,
 			);
 			path = Resources;
@@ -4225,6 +4232,7 @@
 		9F9238CD1E24F3DE004BEEE0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9207AF01F6A7DE3003B79BF /* PassphraseSignIn */,
 				9F78D9D61EE93F36003A0B95 /* AlertController */,
 				14ED3AB91E4A2A8D00DF8079 /* Browse */,
 				9F844BD81E30DF3F001C5498 /* Favorites */,
@@ -4535,6 +4543,23 @@
 				A9202E571ED84F6A0036E9B7 /* MessageModel.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		A9207AF01F6A7DE3003B79BF /* PassphraseSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A9207AF11F6A7DE3003B79BF /* PassphraseSignInView.swift */,
+				A9207AF21F6A7DE3003B79BF /* PassphraseSignInViewController.swift */,
+			);
+			path = PassphraseSignIn;
+			sourceTree = "<group>";
+		};
+		A9207AF51F6A8088003B79BF /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A9207AF61F6A8088003B79BF /* passwords-library.txt */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		A98A29CD1E923784003BBE8E /* Rate Users */ = {
@@ -4942,6 +4967,7 @@
 				9FA12BEC1E65CF73003705F6 /* PN.m4a in Resources */,
 				9FAACD071E31120600FB871D /* SF-UI-Text-UltrathinItalic.otf in Resources */,
 				9FAACCF61E31120600FB871D /* SF-UI-Display-Regular.otf in Resources */,
+				A9207AF71F6A8088003B79BF /* passwords-library.txt in Resources */,
 				9FAACCF41E31120600FB871D /* SF-UI-Display-Light.otf in Resources */,
 				9FAACCF91E31120600FB871D /* SF-UI-Display-Ultralight.otf in Resources */,
 				A9191DC91F2203DD00498A4F /* AdvancedSettings.storyboard in Resources */,
@@ -6053,6 +6079,7 @@
 				A921D3631E7C145E00EE3221 /* Collection+Additions.swift in Sources */,
 				9F4D7F961EEA8B4500FB5361 /* Common.m in Sources */,
 				9F4D805E1EEA8B4500FB5361 /* MediaPickerGalleryItem.m in Sources */,
+				A9207AF41F6A7DE3003B79BF /* PassphraseSignInViewController.swift in Sources */,
 				9FCDBAE31E28E71900A70E07 /* FavoritesController.swift in Sources */,
 				9F4D813A1EEA8B4600FB5361 /* PhotoEditorBlurAreaView.m in Sources */,
 				9F4D7F581EEA8B4500FB5361 /* PhotoProcessPass.m in Sources */,
@@ -6418,6 +6445,7 @@
 				A9E1DCD61F1E1989001A4ABE /* MessagesTextCell.swift in Sources */,
 				9F4D7F821EEA8B4500FB5361 /* ATQueue.m in Sources */,
 				9F4D7F9A1EEA8B4500FB5361 /* DocumentAttributeAudio.m in Sources */,
+				A9207AF31F6A7DE3003B79BF /* PassphraseSignInView.swift in Sources */,
 				9F4D80B61EEA8B4500FB5361 /* ImageView.m in Sources */,
 				9F4D810C1EEA8B4500FB5361 /* ModernGalleryItemView.m in Sources */,
 				9F4D815E1EEA8B4600FB5361 /* PhotoFilterCell.m in Sources */,
