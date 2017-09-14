@@ -57,6 +57,10 @@ extension OfflineAlertDisplaying where Self: UINavigationController {
             self.offlineAlertView.heightConstraint?.constant = ActiveNetworkView.height
             self.requestLayoutUpdate()
         }
+
+        DispatchQueue.main.asyncAfter(seconds: 2.2) {
+            self.hideOfflineAlertView()
+        }
     }
 
     func hideOfflineAlertView() {
