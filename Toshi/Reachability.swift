@@ -23,9 +23,9 @@ protocol ReachabilityDelegate: class {
 class ReachabilityManager {
     weak var delegate: ReachabilityDelegate?
 
-    init() {
-        let reachability = Reachability()
+    let reachability = Reachability()
 
+    func register() {
         reachability?.whenReachable = { reachability in
             DispatchQueue.main.async {
                self.delegate?.reachabilityDidChange(toConnected: true)

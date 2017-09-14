@@ -39,6 +39,8 @@ extension OfflineAlertDisplaying where Self: UINavigationController {
         view.addSubview(offlineAlertView)
         NSLayoutConstraint.activate(offlineAlertViewConstraints)
 
+        reachabilityManager.register()
+
         if !hidden {
             showOfflineAlertView()
         }
