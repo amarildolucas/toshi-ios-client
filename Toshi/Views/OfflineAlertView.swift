@@ -23,8 +23,6 @@ class OfflineAlertView: UIView {
 
     var heightConstraint: NSLayoutConstraint?
 
-    fileprivate var isOffline = true
-
     fileprivate lazy var textLabel: UILabel = {
         let textLabel = UILabel(withAutoLayout: true)
 

@@ -18,6 +18,8 @@ import UIKit
 import SweetUIKit
 
 protocol OfflineAlertDisplaying: class {
+    var reachabilityManager: ReachabilityManager { get }
+
     var offlineAlertView: OfflineAlertView { get }
     var offlineAlertViewConstraints: [NSLayoutConstraint] { get }
 
@@ -30,6 +32,7 @@ protocol OfflineAlertDisplaying: class {
 }
 
 extension OfflineAlertDisplaying where Self: UINavigationController {
+
     func setupOfflineAlertView(hidden: Bool = false) {
         guard let offlineAlertView = self.offlineAlertView as OfflineAlertView? else { return }
 
