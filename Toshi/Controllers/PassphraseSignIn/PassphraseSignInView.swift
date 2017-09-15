@@ -24,8 +24,8 @@ final class PassphraseSignInView: UIView {
         return view
     }()
 
-    lazy var textField: UITextField = {
-        let view = UITextField()
+    lazy var textField: DeletableTextField = {
+        let view = DeletableTextField()
         view.font = Theme.regular(size: 16)
         view.textColor = Theme.darkTextColor
         view.returnKeyType = .next
@@ -56,5 +56,9 @@ final class PassphraseSignInView: UIView {
 
     func textFieldDidChange(_ textField: UITextField) {
         textField.text = textField.text?.lowercased()
+    }
+    
+    func allEvents(_ textField: UITextField) {
+        print("check!")
     }
 }
