@@ -1790,6 +1790,7 @@
 		A9BF33B71E76F918009A51AA /* CheckboxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF33B61E76F918009A51AA /* CheckboxControl.swift */; };
 		A9BF33B81E76F918009A51AA /* CheckboxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF33B61E76F918009A51AA /* CheckboxControl.swift */; };
 		A9C7D40C1F1FAF0C008A9654 /* MessagesStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1DCE41F1E5C64001A4ABE /* MessagesStatusCell.swift */; };
+		A9CDC4EB1F6C26C1000BFB9F /* DeletableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CDC4EA1F6C26C1000BFB9F /* DeletableTextField.swift */; };
 		A9D8F41E1F223DA500C3614A /* BalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9191DCF1F2220C100498A4F /* BalanceController.swift */; };
 		A9E1DCD21F1E1989001A4ABE /* MessagesBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1DCCD1F1E1989001A4ABE /* MessagesBasicCell.swift */; };
 		A9E1DCD31F1E1989001A4ABE /* MessagesImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1DCCE1F1E1989001A4ABE /* MessagesImageCell.swift */; };
@@ -2921,6 +2922,7 @@
 		A9BF33AE1E76DF54009A51AA /* PassphraseCopyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseCopyController.swift; sourceTree = "<group>"; };
 		A9BF33B01E76DF67009A51AA /* PassphraseVerifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseVerifyController.swift; sourceTree = "<group>"; };
 		A9BF33B61E76F918009A51AA /* CheckboxControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxControl.swift; sourceTree = "<group>"; };
+		A9CDC4EA1F6C26C1000BFB9F /* DeletableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeletableTextField.swift; sourceTree = "<group>"; };
 		A9E1DCCD1F1E1989001A4ABE /* MessagesBasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesBasicCell.swift; sourceTree = "<group>"; };
 		A9E1DCCE1F1E1989001A4ABE /* MessagesImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesImageCell.swift; sourceTree = "<group>"; };
 		A9E1DCCF1F1E1989001A4ABE /* MessagesPaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesPaymentCell.swift; sourceTree = "<group>"; };
@@ -4556,6 +4558,7 @@
 				A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */,
 				A9207AF11F6A7DE3003B79BF /* PassphraseSignInView.swift */,
 				A9207AF21F6A7DE3003B79BF /* PassphraseSignInViewController.swift */,
+				A9CDC4EA1F6C26C1000BFB9F /* DeletableTextField.swift */,
 			);
 			path = PassphraseSignIn;
 			sourceTree = "<group>";
@@ -6316,6 +6319,7 @@
 				9F4D804A1EEA8B4500FB5361 /* MediaAssetFetchResult.m in Sources */,
 				9F4D803E1EEA8B4500FB5361 /* DataResource.m in Sources */,
 				9F4D7FE81EEA8B4500FB5361 /* MemoryCache.m in Sources */,
+				A9CDC4EB1F6C26C1000BFB9F /* DeletableTextField.swift in Sources */,
 				9F4D7EE21EEA8B4500FB5361 /* TGImagePickerController.mm in Sources */,
 				9F4D7FBE1EEA8B4500FB5361 /* GPUImageFramebufferCache.m in Sources */,
 				9F78D9D41EE93EFF003A0B95 /* PaymentConfirmationController.swift in Sources */,
