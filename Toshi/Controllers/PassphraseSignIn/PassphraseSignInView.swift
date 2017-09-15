@@ -28,6 +28,7 @@ final class PassphraseSignInView: UIView {
         let view = UITextField()
         view.font = Theme.regular(size: 16)
         view.textColor = Theme.darkTextColor
+        view.returnKeyType = .next
         view.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 
         return view
