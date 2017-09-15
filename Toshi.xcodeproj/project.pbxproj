@@ -1759,6 +1759,7 @@
 		A963D5301F288E5D00297FDF /* MessagesCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963D52F1F288E5D00297FDF /* MessagesCornerView.swift */; };
 		A963D5311F288E8900297FDF /* MessagesCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963D52F1F288E5D00297FDF /* MessagesCornerView.swift */; };
 		A96B1ACB1F6AB12A0087754F /* PassphraseSignInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96B1ACA1F6AB12A0087754F /* PassphraseSignInCell.swift */; };
+		A96B1ACD1F6BBEF90087754F /* PassphraseSignInLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */; };
 		A997B0FE1EF94B4600A143FE /* AddMoneyBulletPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6B7C1EF7D746007C3206 /* AddMoneyBulletPoint.swift */; };
 		A997B0FF1EF94B4900A143FE /* AddMoneyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6B781EF7CEAD007C3206 /* AddMoneyController.swift */; };
 		A997B1001EF94B4C00A143FE /* AddMoneyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6B7A1EF7D582007C3206 /* AddMoneyHeader.swift */; };
@@ -2905,6 +2906,7 @@
 		A9603F9C1F4DB8C100BF57B1 /* DistributionDev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DistributionDev.plist; sourceTree = "<group>"; };
 		A963D52F1F288E5D00297FDF /* MessagesCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesCornerView.swift; sourceTree = "<group>"; };
 		A96B1ACA1F6AB12A0087754F /* PassphraseSignInCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInCell.swift; sourceTree = "<group>"; };
+		A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInLayout.swift; sourceTree = "<group>"; };
 		A9AC74071E77E37500365029 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		A9AC740A1E77E62900365029 /* UIView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		A9AC740D1E78051F00365029 /* TitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
@@ -4551,6 +4553,7 @@
 			isa = PBXGroup;
 			children = (
 				A96B1ACA1F6AB12A0087754F /* PassphraseSignInCell.swift */,
+				A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */,
 				A9207AF11F6A7DE3003B79BF /* PassphraseSignInView.swift */,
 				A9207AF21F6A7DE3003B79BF /* PassphraseSignInViewController.swift */,
 			);
@@ -6409,6 +6412,7 @@
 				9F4D815C1EEA8B4600FB5361 /* PhotoEntitiesContainerView.m in Sources */,
 				2BE6FB0F1EFC0C1600B0B848 /* AvatarManager.swift in Sources */,
 				9F9238B61E24F1D2004BEEE0 /* main.m in Sources */,
+				A96B1ACD1F6BBEF90087754F /* PassphraseSignInLayout.swift in Sources */,
 				9F4D7F401EEA8B4500FB5361 /* PhotoEnhancePass.m in Sources */,
 				A9191DD01F2220C100498A4F /* BalanceController.swift in Sources */,
 				9F4D7F4C1EEA8B4500FB5361 /* PhotoLookupFilterPass.m in Sources */,
