@@ -114,7 +114,7 @@ extension PassphraseSignInViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PassphraseSignInCell.reuseIdentifier, for: indexPath)
 
         if let cell = cell as? PassphraseSignInCell {
-            cell.setText(typed[indexPath.item])
+            cell.setText(typed[indexPath.item], isFirstAndOnly: itemCount == 1)
         }
 
         return cell
@@ -150,7 +150,7 @@ extension PassphraseSignInViewController: UITextFieldDelegate {
             if let match = passwordMatch(for: text) {
                 cell.setText(text, with: match)
             } else {
-                cell.setText(text)
+                cell.setText(text, isFirstAndOnly: itemCount == 1)
             }
 
             signInView?.collectionView.collectionViewLayout.invalidateLayout()

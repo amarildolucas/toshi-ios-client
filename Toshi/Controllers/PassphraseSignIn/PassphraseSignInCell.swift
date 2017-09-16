@@ -8,6 +8,7 @@ class PassphraseSignInCell: UICollectionViewCell {
     private lazy var passwordLabel = UILabel()
     private(set) var text: String = ""
     private(set) var match: String?
+    private(set) var isFirstAndOnly: Bool = false
 
     override var isSelected: Bool {
         didSet {
@@ -34,16 +35,17 @@ class PassphraseSignInCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setText(_ text: String, with match: String? = nil) {
+    func setText(_ text: String, with match: String? = nil, isFirstAndOnly: Bool = false) {
         self.text = text
         self.match = match
+        self.isFirstAndOnly = isFirstAndOnly
 
         updateAttributedText(text, with: match)
     }
 
     private func updateAttributedText(_ text: String, with match: String? = nil) {
-
-        let string = text.isEmpty ? "..." : match ?? text
+        let emptyString = isFirstAndOnly ? Localized("passphrase_sign_in_placeholder") : Localized("passphrase_sign_in_ellipsis")
+        let string = text.isEmpty ? emptyString : match ?? text
 
         let attributes: [String: Any] = [
             NSFontAttributeName: Theme.regular(size: 17),

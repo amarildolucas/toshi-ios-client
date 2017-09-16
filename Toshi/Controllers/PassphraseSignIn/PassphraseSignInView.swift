@@ -57,8 +57,4 @@ final class PassphraseSignInView: UIView {
     func textFieldDidChange(_ textField: UITextField) {
         textField.text = textField.text?.lowercased()
     }
-    
-    func allEvents(_ textField: UITextField) {
-        print("check!")
-    }
 }
