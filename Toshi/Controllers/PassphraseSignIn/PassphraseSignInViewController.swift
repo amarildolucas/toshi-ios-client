@@ -135,7 +135,9 @@ extension PassphraseSignInViewController: UITextFieldDelegate {
                     UIView.performWithoutAnimation {
                         self?.cleanUp(after: newIndexPath, completion: { [weak self] _ in
                             guard let itemCount = self?.itemCount else { return }
-                            self?.signInView?.collectionView.selectItem(at: IndexPath(item: itemCount - 1, section: 0), animated: false, scrollPosition: .top)
+                            let newIndexPath = IndexPath(item: itemCount - 1, section: 0)
+                            self?.signInView?.collectionView.selectItem(at: newIndexPath, animated: false, scrollPosition: .top)
+                            self?.cleanUp(after: newIndexPath)
                         })
                     }
                 })
