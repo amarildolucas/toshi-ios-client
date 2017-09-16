@@ -10,7 +10,16 @@ class PassphraseSignInCell: UICollectionViewCell {
     private(set) var match: String?
     private(set) var isFirstAndOnly: Bool = false
     private var caretViewLeftConstraint: NSLayoutConstraint?
-    private let caretKerning: CGFloat = 2
+    private let caretKerning: CGFloat = 1
+    
+    private lazy var backgroundImageView: UIImageView = {
+        let image = UIImage(named: "sign-in-cell-background")?.stretchableImage(withLeftCapWidth: 18, topCapHeight: 18)
+        
+        let view = UIImageView()
+        view.image = image
+        
+        return view
+    }()
     
     private var caretView: UIView = {
         let view = UIView()
@@ -23,9 +32,8 @@ class PassphraseSignInCell: UICollectionViewCell {
 
     override var isSelected: Bool {
         didSet {
-            contentView.backgroundColor = isSelected ? UIColor.lightGray.withAlphaComponent(0.5) : nil
-            
             caretView.alpha = isSelected ? 1 : 0
+            backgroundImageView.isHidden = isSelected
 
             if let match = match, !isSelected {
                 updateAttributedText(match, with: match)
@@ -38,18 +46,23 @@ class PassphraseSignInCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        contentView.backgroundColor = nil
         contentView.isOpaque = false
-        passwordLabel.clipsToBounds = false
         
+        contentView.addSubview(backgroundImageView)
         contentView.addSubview(passwordLabel)
         passwordLabel.addSubview(caretView)
         
-        passwordLabel.edges(to: contentView, insets: UIEdgeInsets(top: 10, left: 10, bottom: -10, right: -10))
+        backgroundImageView.edges(to: contentView)
+        backgroundImageView.height(36, relation: .equalOrGreater)
+        backgroundImageView.width(36, relation: .equalOrGreater)
+        
+        passwordLabel.edges(to: contentView, insets: UIEdgeInsets(top: 2, left: 13 + caretKerning, bottom: -4, right: -13))
         
         caretViewLeftConstraint = caretView.left(to: passwordLabel)
-        caretView.top(to: passwordLabel)
-        caretView.bottom(to: passwordLabel)
+        caretView.centerY(to: passwordLabel)
         caretView.width(2)
+        caretView.height(21)
         
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
             self.caretView.isHidden = !self.caretView.isHidden
