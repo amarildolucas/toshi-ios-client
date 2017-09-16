@@ -7,17 +7,15 @@ protocol TextFieldDeleteDelegate: class {
 }
 
 final class DeletableTextField: UITextField {
-    
+
     weak var deleteDelegate: TextFieldDeleteDelegate?
-    
+
     override func deleteBackward() {
         if let text = text, !text.isEmpty {
             super.deleteBackward()
             return
         }
-        
+
         deleteDelegate?.backspacedOnEmptyField()
-        
-        super.deleteBackward()
     }
 }

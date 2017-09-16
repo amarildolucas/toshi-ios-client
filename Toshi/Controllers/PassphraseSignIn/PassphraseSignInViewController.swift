@@ -7,7 +7,7 @@ final class PassphraseSignInViewController: UIViewController {
     var signInView: PassphraseSignInView? { return view as? PassphraseSignInView }
     var typed: [String] = [""]
     var itemCount: Int = 1
-
+    
     var activeIndexPath: IndexPath? {
         if let selectedCell = signInView?.collectionView.visibleCells.first(where: { $0.isSelected }) {
             return signInView?.collectionView.indexPath(for: selectedCell)
@@ -166,5 +166,11 @@ extension PassphraseSignInViewController: TextFieldDeleteDelegate {
         guard let indexPath = activeIndexPath, indexPath.item != 0 else { return }
         let newIndexPath = IndexPath(item: indexPath.item - 1, section: 0)
         signInView?.collectionView.selectItem(at: newIndexPath, animated: false, scrollPosition: .top)
+        
+        if let cell = activeCell {
+            signInView?.textField.text = cell.text
+        }
+        
+        cleanUp(after: newIndexPath)
     }
 }
