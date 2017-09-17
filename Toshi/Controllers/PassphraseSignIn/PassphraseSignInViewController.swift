@@ -119,6 +119,15 @@ extension PassphraseSignInViewController: UICollectionViewDataSource {
 
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionElementKindSectionHeader {
+            return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: PassphraseSignInHeader.reuseIdentifier, for: indexPath)
+        }
+        
+        return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: PassphraseSignInFooter.reuseIdentifier, for: indexPath)
+    }
 }
 
 extension PassphraseSignInViewController: UITextFieldDelegate {

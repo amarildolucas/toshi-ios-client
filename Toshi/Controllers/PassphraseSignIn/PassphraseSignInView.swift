@@ -10,6 +10,8 @@ final class PassphraseSignInView: UIView {
         layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = 2
         layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+        layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.width - 30, height: 180)
+        layout.footerReferenceSize = CGSize(width: UIScreen.main.bounds.width - 30, height: 180)
 
         return layout
     }()
@@ -17,6 +19,8 @@ final class PassphraseSignInView: UIView {
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         view.register(PassphraseSignInCell.self, forCellWithReuseIdentifier: PassphraseSignInCell.reuseIdentifier)
+        view.register(PassphraseSignInHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: PassphraseSignInHeader.reuseIdentifier)
+        view.register(PassphraseSignInFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: PassphraseSignInFooter.reuseIdentifier)
         view.backgroundColor = .white
         view.delaysContentTouches = false
         view.isScrollEnabled = false
@@ -39,8 +43,8 @@ final class PassphraseSignInView: UIView {
         backgroundColor = Theme.viewBackgroundColor
 
         addSubview(collectionView)
-        collectionView.edges(to: self, insets: UIEdgeInsets(top: 100, left: 15, bottom: 0, right: -15))
-
+        collectionView.edges(to: self, insets: UIEdgeInsets(top: 0, left: 15, bottom: 0, right: -15))
+        
         addSubview(textField)
         textField.left(to: self)
         textField.bottom(to: self, offset: 0)
