@@ -150,5 +150,5 @@
 "accept_terms_action_agree" = "Agree";
 
 /* Passphrase Sign In */
-"passphrase_sign_in_placeholder" = "12-word Passphrase...";
+"passphrase_sign_in_placeholder" = "Enter your Passphrase...";
 "passphrase_sign_in_ellipsis" = "...";
