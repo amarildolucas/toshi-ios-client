@@ -10,16 +10,10 @@ class PassphraseSignInCell: UICollectionViewCell {
     private(set) var match: String?
     private(set) var isFirstAndOnly: Bool = false
     private var caretViewLeftConstraint: NSLayoutConstraint?
+    private var caretViewRightConstraint: NSLayoutConstraint?
     private let caretKerning: CGFloat = 1
     
-    private lazy var backgroundImageView: UIImageView = {
-        let image = UIImage(named: "sign-in-cell-background")?.stretchableImage(withLeftCapWidth: 18, topCapHeight: 18)
-        
-        let view = UIImageView()
-        view.image = image
-        
-        return view
-    }()
+    private lazy var backgroundImageView = UIImageView(image: UIImage(named: "sign-in-cell-background")?.stretchableImage(withLeftCapWidth: 18, topCapHeight: 18))
     
     private var caretView: UIView = {
         let view = UIView()
@@ -60,6 +54,7 @@ class PassphraseSignInCell: UICollectionViewCell {
         passwordLabel.edges(to: contentView, insets: UIEdgeInsets(top: 2, left: 13 + caretKerning, bottom: -4, right: -13))
         
         caretViewLeftConstraint = caretView.left(to: passwordLabel)
+        caretViewRightConstraint = caretView.right(to: passwordLabel, isActive: false)
         caretView.centerY(to: passwordLabel)
         caretView.width(2)
         caretView.height(21)
@@ -88,12 +83,17 @@ class PassphraseSignInCell: UICollectionViewCell {
         let attributes: [String: Any] = [
             NSFontAttributeName: Theme.regular(size: 17),
             NSForegroundColorAttributeName: Theme.greyTextColor
-            ]
-
+        ]
+        
         let matchingAttributes: [String: Any] = [
             NSFontAttributeName: Theme.regular(size: 17),
             NSForegroundColorAttributeName: Theme.darkTextColor
-            ]
+        ]
+        
+        let errorAttributes: [String: Any] = [
+            NSFontAttributeName: Theme.regular(size: 17),
+            NSForegroundColorAttributeName: Theme.errorColor
+        ]
 
         let attributedText = NSMutableAttributedString(string: string, attributes: attributes)
 
@@ -101,10 +101,19 @@ class PassphraseSignInCell: UICollectionViewCell {
             attributedText.addAttributes(matchingAttributes, range: matchingRange)
             attributedText.addAttribute(NSKernAttributeName, value: caretKerning, range: NSRange(location: matchingRange.length - 1, length: 1))
             
-            let offset = matchingFrame(for: matchingRange, in: attributedText).width - caretKerning
-            caretViewLeftConstraint?.constant = offset
-        } else {
+            caretViewRightConstraint?.isActive = false
+            caretViewLeftConstraint?.isActive = true
+            caretViewLeftConstraint?.constant = matchingFrame(for: matchingRange, in: attributedText).width - caretKerning
+        } else if text.isEmpty {
+            caretViewRightConstraint?.isActive = false
+            caretViewLeftConstraint?.isActive = true
             caretViewLeftConstraint?.constant = 0
+        } else {
+            let errorRange = NSRange(location: 0, length: text.characters.count)
+            attributedText.addAttributes(errorAttributes, range: errorRange)
+            
+            caretViewLeftConstraint?.isActive = false
+            caretViewRightConstraint?.isActive = true
         }
 
         passwordLabel.attributedText = attributedText

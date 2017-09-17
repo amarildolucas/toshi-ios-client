@@ -39,7 +39,7 @@ final class PassphraseSignInView: UIView {
         backgroundColor = Theme.viewBackgroundColor
 
         addSubview(collectionView)
-        collectionView.edges(to: self, insets: UIEdgeInsets(top: 100, left: 30, bottom: 0, right: -30))
+        collectionView.edges(to: self, insets: UIEdgeInsets(top: 100, left: 15, bottom: 0, right: -15))
 
         addSubview(textField)
         textField.left(to: self)
