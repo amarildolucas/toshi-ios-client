@@ -152,3 +152,4 @@
 /* Passphrase Sign In */
 "passphrase_sign_in_placeholder" = "Enter your Passphrase...";
 "passphrase_sign_in_ellipsis" = "...";
+"passphrase_sign_in_title" = "Sign in with your Passphrase";

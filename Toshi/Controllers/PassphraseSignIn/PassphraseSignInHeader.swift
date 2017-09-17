@@ -8,7 +8,7 @@ class PassphraseSignInHeader: UICollectionReusableView {
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
-        view.text = "Sign in with your Passphrase"
+        view.text = Localized("passphrase_sign_in_title")
         view.textAlignment = .center
         view.textColor = Theme.darkTextColor
         view.font = Theme.regular(size: 34)
