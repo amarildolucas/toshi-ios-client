@@ -18,8 +18,6 @@ import UIKit
 import SweetUIKit
 
 protocol OfflineAlertDisplaying: class {
-    var reachabilityManager: ReachabilityManager { get }
-
     var offlineAlertView: OfflineAlertView { get }
     var offlineAlertViewConstraints: [NSLayoutConstraint] { get }
 
@@ -38,8 +36,6 @@ extension OfflineAlertDisplaying where Self: UINavigationController {
 
         view.addSubview(offlineAlertView)
         NSLayoutConstraint.activate(offlineAlertViewConstraints)
-
-        reachabilityManager.register()
 
         if !hidden {
             showOfflineAlertView()

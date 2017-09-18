@@ -94,13 +94,6 @@ public class BrowseNavigationController: UINavigationController {
 }
 
 extension BrowseNavigationController: OfflineAlertDisplaying {
-    var reachabilityManager: ReachabilityManager {
-        let reachabilityManager = ReachabilityManager()
-        reachabilityManager.delegate = self
-
-        return reachabilityManager
-    }
-
     var offlineAlertView: OfflineAlertView {
         return alertView
     }
@@ -109,15 +102,5 @@ extension BrowseNavigationController: OfflineAlertDisplaying {
         return [offlineAlertView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor),
                 offlineAlertView.leftAnchor.constraint(equalTo: view.leftAnchor),
                 offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
-    }
-}
-
-extension BrowseNavigationController: ReachabilityDelegate {
-    func reachabilityDidChange(toConnected connected: Bool) {
-        if connected {
-            hideOfflineAlertView()
-        } else {
-            showOfflineAlertView()
-        }
     }
 }
