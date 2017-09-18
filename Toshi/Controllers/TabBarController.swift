@@ -276,7 +276,7 @@ extension TabBarController: ScannerViewControllerDelegate {
 
 }
 
-extension TabBarController: ReachabilityDelegate{
+extension TabBarController: ReachabilityDelegate {
     func reachabilityDidChange(toConnected connected: Bool) {
         guard let currentOfflineAlertDisplayingNavigationController = currentNavigationController as? OfflineAlertDisplaying else { return }
 

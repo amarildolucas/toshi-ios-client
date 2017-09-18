@@ -141,4 +141,3 @@ extension ChatsNavigationController: OfflineAlertDisplaying {
                 offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
     }
 }
-

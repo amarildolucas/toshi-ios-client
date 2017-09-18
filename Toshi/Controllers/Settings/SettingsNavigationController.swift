@@ -65,4 +65,3 @@ extension SettingsNavigationController: OfflineAlertDisplaying {
                 offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
     }
 }
-

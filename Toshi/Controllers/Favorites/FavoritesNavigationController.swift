@@ -82,4 +82,3 @@ extension FavoritesNavigationController: OfflineAlertDisplaying {
                 offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
     }
 }
-
