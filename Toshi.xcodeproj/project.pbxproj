@@ -1821,7 +1821,6 @@
 		D197B1DF02A3FA1A8E60AD65 /* EthereumConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B7EC7030BE4C4508AACD /* EthereumConverterTests.swift */; };
 		D197B1E784F2176023D0F635 /* YapDatabaseViewConnection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B494213B9F6EC5413D88 /* YapDatabaseViewConnection+Additions.swift */; };
 		D197B22F0A1803EEBB6819FE /* searchContacts.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B4747DA95DF531E0C300 /* searchContacts.json */; };
-		D197B2471FECBB1FEE4DA605 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B252A6962A3B8E066178 /* NavigationController.swift */; };
 		D197B2A45E12329713413EAE /* createUnsignedTransaction.json in Resources */ = {isa = PBXBuildFile; fileRef = D197BB03F2BFF88371C66F25 /* createUnsignedTransaction.json */; };
 		D197B30022F9B4D9D27325F7 /* getTopRatedApps.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B06C962A9EC5993916F9 /* getTopRatedApps.json */; };
 		D197B341D7AC04907550BFA3 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D197BD2C5E7FC428D7ADB559 /* TestAppDelegate.m */; };
@@ -1839,7 +1838,6 @@
 		D197B6D91E419A23890C7E8B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BB4FC8D408B73FE253E5 /* BlurView.swift */; };
 		D197B74275EBC3A229F0D4D9 /* timestamp.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B5835BCEB0D7A2DA6967 /* timestamp.json */; };
 		D197B7AB167F98492E93A3D1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B4CC71953C367E54D52F /* Reachability.swift */; };
-		D197B7D3D6233CFCCC40FE49 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B252A6962A3B8E066178 /* NavigationController.swift */; };
 		D197B80A67FA2271BE1C9621 /* YapDatabaseViewConnection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B494213B9F6EC5413D88 /* YapDatabaseViewConnection+Additions.swift */; };
 		D197B83F0A9396CF2E7628D5 /* ActiveNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B6E47F5F979A8C154E9A /* ActiveNetworkView.swift */; };
 		D197B8B87F4A0DCA761DE9D6 /* retrieveUser.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B8E798FCD39B97824BBA /* retrieveUser.json */; };
@@ -1856,7 +1854,6 @@
 		D197BC097FF51FA38A1FE701 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B4CC71953C367E54D52F /* Reachability.swift */; };
 		D197BC32BA4D952C0E815F18 /* ActiveNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B6E47F5F979A8C154E9A /* ActiveNetworkView.swift */; };
 		D197BD8E4D43B3EFF276694E /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D197BD2C5E7FC428D7ADB559 /* TestAppDelegate.m */; };
-		D197BE657B8594BC2783EAB9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B252A6962A3B8E066178 /* NavigationController.swift */; };
 		D197BE71058CA3432F48BF1C /* AppsAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B00DD27312EDFE1B9ECB /* AppsAPIClientTests.swift */; };
 		D197BE886E4731A7175FC7E6 /* OfflineAlertDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BCCB111F2E44FAD1EC6B /* OfflineAlertDisplaying.swift */; };
 		D197BEB965F76FE14EF90555 /* ActiveNetworkDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BAEA583CAF9862D17B38 /* ActiveNetworkDisplaying.swift */; };
@@ -2952,7 +2949,6 @@
 		D197B12C40488CB1523BB212 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		D197B1451DB719E76A084950 /* timestamp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timestamp.json; sourceTree = "<group>"; };
 		D197B175422C9602CE00CF65 /* getCurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCurrencies.json; sourceTree = "<group>"; };
-		D197B252A6962A3B8E066178 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D197B29F0030A48233E69AD9 /* nonExistingUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nonExistingUser.json; sourceTree = "<group>"; };
 		D197B33D03FC3E507BE3B3C1 /* EthereumAPIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumAPIClientTests.swift; sourceTree = "<group>"; };
 		D197B3AC0E3346D86F7A4559 /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
@@ -4264,7 +4260,6 @@
 				A9ED6CC61E8282B700160637 /* Sign In */,
 				9F54AB0C1ECC8D390008489F /* ScannerController.swift */,
 				9FCDBADE1E28E6DC00A70E07 /* TabBarController.swift */,
-				D197B252A6962A3B8E066178 /* NavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -5945,7 +5940,6 @@
 				2BA888ED1F600ED500B03D8E /* Currency.swift in Sources */,
 				D197B341D7AC04907550BFA3 /* TestAppDelegate.m in Sources */,
 				D197B031582D61CF47A8356E /* OfflineAlertView.swift in Sources */,
-				D197B7D3D6233CFCCC40FE49 /* NavigationController.swift in Sources */,
 				D197BE886E4731A7175FC7E6 /* OfflineAlertDisplaying.swift in Sources */,
 				D197B7AB167F98492E93A3D1 /* Reachability.swift in Sources */,
 			);
@@ -6470,7 +6464,6 @@
 				D197B80A67FA2271BE1C9621 /* YapDatabaseViewConnection+Additions.swift in Sources */,
 				D197B5E0F04D0A7529EC6342 /* TestAppDelegate.m in Sources */,
 				D197BA0C5CF10DECCC00E7B3 /* OfflineAlertView.swift in Sources */,
-				D197BE657B8594BC2783EAB9 /* NavigationController.swift in Sources */,
 				D197B0698FB51D61B9266352 /* OfflineAlertDisplaying.swift in Sources */,
 				D197BFBCDC1222BDB867EE38 /* Reachability.swift in Sources */,
 			);
@@ -6993,7 +6986,6 @@
 				2BA888EC1F600ED500B03D8E /* Currency.swift in Sources */,
 				A9603F371F4DABDC00BF57B1 /* TestAppDelegate.m in Sources */,
 				D197B4766B54E8C2E37872C7 /* OfflineAlertView.swift in Sources */,
-				D197B2471FECBB1FEE4DA605 /* NavigationController.swift in Sources */,
 				D197B39471DCF0DE8A0CC1AA /* OfflineAlertDisplaying.swift in Sources */,
 				D197BC097FF51FA38A1FE701 /* Reachability.swift in Sources */,
 			);

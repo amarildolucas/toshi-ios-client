@@ -15,13 +15,17 @@
 
 import UIKit
 
-public class BrowseNavigationController: NavigationController {
+public class BrowseNavigationController: UINavigationController {
 
     static let selectedAppKey = "Restoration::SelectedApp"
 
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
+
+    fileprivate lazy var alertView: OfflineAlertView = {
+        self.defaultOfflineAlertView()
+    }()
 
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
@@ -39,8 +43,16 @@ public class BrowseNavigationController: NavigationController {
         fatalError("")
     }
 
+    func defaultOfflineAlertView() -> OfflineAlertView {
+        let offlineAlertView = OfflineAlertView(withAutoLayout: true)
+
+        return offlineAlertView
+    }
+
     public override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupOfflineAlertView(hidden: true)
 
         // TODO: move restoration to the tabbar controller, so we only restore the currently selected.
         if let appData = UserDefaults.standard.data(forKey: BrowseNavigationController.selectedAppKey) {
@@ -78,5 +90,34 @@ public class BrowseNavigationController: NavigationController {
     public override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         UserDefaults.standard.removeObject(forKey: BrowseNavigationController.selectedAppKey)
         return super.popToViewController(viewController, animated: animated)
+    }
+}
+
+extension BrowseNavigationController: OfflineAlertDisplaying {
+    var reachabilityManager: ReachabilityManager {
+        let reachabilityManager = ReachabilityManager()
+        reachabilityManager.delegate = self
+
+        return reachabilityManager
+    }
+
+    var offlineAlertView: OfflineAlertView {
+        return alertView
+    }
+
+    var offlineAlertViewConstraints: [NSLayoutConstraint] {
+        return [offlineAlertView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor),
+                offlineAlertView.leftAnchor.constraint(equalTo: view.leftAnchor),
+                offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
+    }
+}
+
+extension BrowseNavigationController: ReachabilityDelegate {
+    func reachabilityDidChange(toConnected connected: Bool) {
+        if connected {
+            hideOfflineAlertView()
+        } else {
+            showOfflineAlertView()
+        }
     }
 }
