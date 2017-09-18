@@ -27,6 +27,12 @@ public class BrowseNavigationController: UINavigationController {
         self.defaultOfflineAlertView()
     }()
 
+    func defaultOfflineAlertView() -> OfflineAlertView {
+        let offlineAlertView = OfflineAlertView(withAutoLayout: true)
+
+        return offlineAlertView
+    }
+
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
     }
@@ -41,12 +47,6 @@ public class BrowseNavigationController: UINavigationController {
 
     public required init?(coder _: NSCoder) {
         fatalError("")
-    }
-
-    func defaultOfflineAlertView() -> OfflineAlertView {
-        let offlineAlertView = OfflineAlertView(withAutoLayout: true)
-
-        return offlineAlertView
     }
 
     public override func viewDidLoad() {
