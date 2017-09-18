@@ -4560,11 +4560,11 @@
 			children = (
 				A9CDC4EA1F6C26C1000BFB9F /* DeletableTextField.swift */,
 				A96B1ACA1F6AB12A0087754F /* PassphraseSignInCell.swift */,
+				A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooter.swift */,
+				A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeader.swift */,
 				A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */,
 				A9207AF11F6A7DE3003B79BF /* PassphraseSignInView.swift */,
 				A9207AF21F6A7DE3003B79BF /* PassphraseSignInViewController.swift */,
-				A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeader.swift */,
-				A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooter.swift */,
 			);
 			path = PassphraseSignIn;
 			sourceTree = "<group>";
