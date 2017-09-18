@@ -2,7 +2,11 @@
   "commitish" : "690879d9b4a1e87f580277e0ac10120033b9072f",
   "iOS" : [
     {
+<<<<<<< HEAD
       "hash" : "0e9cebd50fe36f1ca856e34b4e396fa0a341187b7c1fd34ed3d39e49465b1334",
+=======
+      "hash" : "d692e01b09fce627d6314e1c7983922d204e5e9624d6bd9e596670e0e30cd18d",
+>>>>>>> 64bc1b44d2f2ae18dfe6a5f8d81f679afaa70877
       "name" : "Teapot"
     }
   ]
