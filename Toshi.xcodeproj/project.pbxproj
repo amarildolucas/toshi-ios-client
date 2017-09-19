@@ -1162,8 +1162,8 @@
 		A9207AF71F6A8088003B79BF /* passwords-library.txt in Resources */ = {isa = PBXBuildFile; fileRef = A9207AF61F6A8088003B79BF /* passwords-library.txt */; };
 		A921D3631E7C145E00EE3221 /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921D3621E7C145E00EE3221 /* Collection+Additions.swift */; };
 		A921D3641E7C145E00EE3221 /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921D3621E7C145E00EE3221 /* Collection+Additions.swift */; };
-		A92BE9371F6E6E380054C7A4 /* PassphraseSignInHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeader.swift */; };
-		A92BE9391F6E6E480054C7A4 /* PassphraseSignInFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooter.swift */; };
+		A92BE9371F6E6E380054C7A4 /* PassphraseSignInHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeaderView.swift */; };
+		A92BE9391F6E6E480054C7A4 /* PassphraseSignInFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooterView.swift */; };
 		A94BDE151E800EF800B2F0CF /* ConfirmationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BDE141E800EF800B2F0CF /* ConfirmationButton.swift */; };
 		A9603D3A1F4DABDC00BF57B1 /* RoundIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9181D211EDD8154005B63F6 /* RoundIconButton.swift */; };
 		A9603D3B1F4DABDC00BF57B1 /* MediaAssetModernImageSignals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D7CF01EEA8B4400FB5361 /* MediaAssetModernImageSignals.m */; };
@@ -2907,8 +2907,8 @@
 		A9207AF21F6A7DE3003B79BF /* PassphraseSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInViewController.swift; sourceTree = "<group>"; };
 		A9207AF61F6A8088003B79BF /* passwords-library.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "passwords-library.txt"; sourceTree = "<group>"; };
 		A921D3621E7C145E00EE3221 /* Collection+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Additions.swift"; sourceTree = "<group>"; };
-		A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInHeader.swift; sourceTree = "<group>"; };
-		A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInFooter.swift; sourceTree = "<group>"; };
+		A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInHeaderView.swift; sourceTree = "<group>"; };
+		A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInFooterView.swift; sourceTree = "<group>"; };
 		A94BDE141E800EF800B2F0CF /* ConfirmationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationButton.swift; sourceTree = "<group>"; };
 		A9603F951F4DABDC00BF57B1 /* Toshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9603F9C1F4DB8C100BF57B1 /* DistributionDev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DistributionDev.plist; sourceTree = "<group>"; };
@@ -4565,8 +4565,8 @@
 			children = (
 				A9CDC4EA1F6C26C1000BFB9F /* DeletableTextField.swift */,
 				A96B1ACA1F6AB12A0087754F /* PassphraseSignInCell.swift */,
-				A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooter.swift */,
-				A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeader.swift */,
+				A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooterView.swift */,
+				A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeaderView.swift */,
 				A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */,
 				A9207AF11F6A7DE3003B79BF /* PassphraseSignInView.swift */,
 				A9207AF21F6A7DE3003B79BF /* PassphraseSignInViewController.swift */,
@@ -6358,7 +6358,7 @@
 				9F4D7EFC1EEA8B4500FB5361 /* HighlightsTool.m in Sources */,
 				9F78D9D81EE93F36003A0B95 /* AlertController.swift in Sources */,
 				9F4D7EEA1EEA8B4500FB5361 /* ViewController.mm in Sources */,
-				A92BE9391F6E6E480054C7A4 /* PassphraseSignInFooter.swift in Sources */,
+				A92BE9391F6E6E480054C7A4 /* PassphraseSignInFooterView.swift in Sources */,
 				9F4D80681EEA8B4500FB5361 /* ModernButtonViewModel.m in Sources */,
 				9F4D7FD01EEA8B4500FB5361 /* matrix.m in Sources */,
 				9F4D7F781EEA8B4500FB5361 /* AnimationBlockDelegate.m in Sources */,
@@ -6425,7 +6425,7 @@
 				9F4D7F441EEA8B4500FB5361 /* PhotoFilterDefinition.m in Sources */,
 				A916290F1F3C3A02008A7F36 /* PaymentAddressInputView.swift in Sources */,
 				9F4D7FFC1EEA8B4500FB5361 /* PGCameraMomentSession.m in Sources */,
-				A92BE9371F6E6E380054C7A4 /* PassphraseSignInHeader.swift in Sources */,
+				A92BE9371F6E6E380054C7A4 /* PassphraseSignInHeaderView.swift in Sources */,
 				9F4D80841EEA8B4500FB5361 /* AttachmentCameraView.m in Sources */,
 				9F4D7F2A1EEA8B4500FB5361 /* PhotoCropControl.m in Sources */,
 				9FCF13281E52FC2A0078FF7F /* TSThread+Additions.m in Sources */,

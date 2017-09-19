@@ -16,11 +16,13 @@ class PassphraseSignInFooter: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        backgroundColor = Theme.borderColor
+        
         addSubview(divider)
-        divider.top(to: self, offset: 10)
+        divider.top(to: self)
         divider.left(to: self, offset: 15)
         divider.right(to: self, offset: -15)
-        divider.height(1)
+        divider.height(180)
     }
     
     required init?(coder aDecoder: NSCoder) {
