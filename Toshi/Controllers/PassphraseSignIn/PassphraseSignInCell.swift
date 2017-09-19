@@ -31,7 +31,7 @@ class PassphraseSignInCell: UICollectionViewCell {
 
             if let match = match, !isSelected {
                 updateAttributedText(match, with: match)
-                bounce()
+                contentView.bounce()
             } else {
                 updateAttributedText(text, with: match)
             }
@@ -117,5 +117,9 @@ class PassphraseSignInCell: UICollectionViewCell {
         layoutManager.characterRange(forGlyphRange: range, actualGlyphRange: &glyphRange)
         
         return layoutManager.boundingRect(forGlyphRange: glyphRange, in: textContainer)
+    }
+    
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        return super.preferredLayoutAttributesFitting(layoutAttributes)
     }
 }
