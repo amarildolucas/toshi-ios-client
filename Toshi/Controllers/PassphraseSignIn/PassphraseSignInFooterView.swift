@@ -2,9 +2,7 @@ import Foundation
 import UIKit
 import TinyConstraints
 
-class PassphraseSignInFooter: UICollectionReusableView {
-    
-    static let reuseIdentifier: String = "PassphraseSignInFooter"
+class PassphraseSignInFooterView: UIView {
     
     private lazy var divider: UIView = {
         let view = UIView()
@@ -20,13 +18,12 @@ class PassphraseSignInFooter: UICollectionReusableView {
         
         addSubview(divider)
         divider.top(to: self)
-        divider.left(to: self, offset: 15)
-        divider.right(to: self, offset: -15)
-        divider.height(180)
+        divider.left(to: self, offset: 30)
+        divider.right(to: self, offset: -30)
+        divider.height(1)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

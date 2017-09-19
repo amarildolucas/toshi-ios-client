@@ -137,10 +137,6 @@ final class SplashViewController: UIViewController {
         showAcceptTermsAlert()
     }
     
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     fileprivate func showAcceptTermsAlert() {
         
         let alert = UIAlertController(title: Localized("accept_terms_title"), message: Localized("accept_terms_text"), preferredStyle: .alert)

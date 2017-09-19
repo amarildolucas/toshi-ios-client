@@ -2,9 +2,9 @@ import Foundation
 import UIKit
 import TinyConstraints
 
-class PassphraseSignInHeader: UICollectionReusableView {
+class PassphraseSignInHeaderView: UIView {
     
-    static let reuseIdentifier: String = "PassphraseSignInHeader"
+    static let height: CGFloat = 160
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()

@@ -7,7 +7,7 @@ final class PassphraseSignInViewController: UIViewController {
     var signInView: PassphraseSignInView? { return view as? PassphraseSignInView }
     var typed: [String] = [""]
     var itemCount: Int = 1
-    
+
     var activeIndexPath: IndexPath? {
         if let selectedCell = signInView?.collectionView.visibleCells.first(where: { $0.isSelected }) {
             return signInView?.collectionView.indexPath(for: selectedCell)
@@ -33,6 +33,7 @@ final class PassphraseSignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        automaticallyAdjustsScrollViewInsets = false
 
         signInView?.collectionView.delegate = self
         signInView?.collectionView.dataSource = self
@@ -69,26 +70,35 @@ final class PassphraseSignInViewController: UIViewController {
 
     fileprivate func addItem(at indexPath: IndexPath, completion: ((Bool) -> Swift.Void)? = nil) {
 
-        signInView?.collectionView.performBatchUpdates({
-            self.signInView?.collectionView.insertItems(at: [indexPath])
-            self.itemCount += 1
-            self.typed.append("")
-        }, completion: completion)
+        UIView.animate(withDuration: 0) {
+            self.signInView?.collectionView.performBatchUpdates({
+                self.signInView?.collectionView.insertItems(at: [indexPath])
+                self.itemCount += 1
+                self.typed.append("")
+            }, completion: { finished in
+                self.signInView?.layoutIfNeeded()
+                completion?(finished)
+            })
+        }
     }
 
     fileprivate func cleanUp(after indexPath: IndexPath, completion: ((Bool) -> Swift.Void)? = nil) {
 
-        signInView?.collectionView.performBatchUpdates({
-            self.signInView?.collectionView.indexPathsForVisibleItems.forEach {
+        UIView.animate(withDuration: 0) {
+            self.signInView?.collectionView.performBatchUpdates({
+                self.signInView?.collectionView.indexPathsForVisibleItems.forEach {
 
-                if $0 != indexPath, self.typed[$0.item].isEmpty {
-                    self.typed.remove(at: $0.item)
-                    self.signInView?.collectionView.deleteItems(at: [$0])
-                    self.itemCount -= 1
-
+                    if $0 != indexPath, self.typed[$0.item].isEmpty {
+                        self.typed.remove(at: $0.item)
+                        self.signInView?.collectionView.deleteItems(at: [$0])
+                        self.itemCount -= 1
+                    }
                 }
-            }
-        }, completion: completion)
+            }, completion: { finished in
+                self.signInView?.layoutIfNeeded()
+                completion?(finished)
+            })
+        }
     }
 }
 
@@ -119,15 +129,6 @@ extension PassphraseSignInViewController: UICollectionViewDataSource {
 
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        if kind == UICollectionElementKindSectionHeader {
-            return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: PassphraseSignInHeader.reuseIdentifier, for: indexPath)
-        }
-        
-        return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: PassphraseSignInFooter.reuseIdentifier, for: indexPath)
-    }
 }
 
 extension PassphraseSignInViewController: UITextFieldDelegate {
@@ -140,21 +141,23 @@ extension PassphraseSignInViewController: UITextFieldDelegate {
 
             let newIndexPath = IndexPath(item: itemCount, section: 0)
             UIView.performWithoutAnimation {
-                addItem(at: newIndexPath, completion: { [weak self] _ in
+            addItem(at: newIndexPath, completion: { [weak self] _ in
+                UIView.performWithoutAnimation {
+                self?.cleanUp(after: newIndexPath, completion: { [weak self] _ in
+                    guard let itemCount = self?.itemCount else { return }
+                    let newIndexPath = IndexPath(item: itemCount - 1, section: 0)
+                    self?.signInView?.collectionView.selectItem(at: newIndexPath, animated: false, scrollPosition: .top)
                     UIView.performWithoutAnimation {
-                        self?.cleanUp(after: newIndexPath, completion: { [weak self] _ in
-                            guard let itemCount = self?.itemCount else { return }
-                            let newIndexPath = IndexPath(item: itemCount - 1, section: 0)
-                            self?.signInView?.collectionView.selectItem(at: newIndexPath, animated: false, scrollPosition: .top)
-                            self?.cleanUp(after: newIndexPath)
-                        })
+                    self?.cleanUp(after: newIndexPath)
                     }
                 })
+                }
+            })
             }
 
             return false
         }
-        
+
         if let text = (textField.text as NSString?)?.replacingCharacters(in: range, with: string), let cell = activeCell {
             typed[indexPath.item] = text
 
@@ -167,21 +170,24 @@ extension PassphraseSignInViewController: UITextFieldDelegate {
             signInView?.collectionView.collectionViewLayout.invalidateLayout()
         }
 
+        signInView?.layoutIfNeeded()
+
         return true
     }
 }
 
 extension PassphraseSignInViewController: TextFieldDeleteDelegate {
-    
+
     func backspacedOnEmptyField() {
         guard let indexPath = activeIndexPath, indexPath.item != 0 else { return }
+
         let newIndexPath = IndexPath(item: indexPath.item - 1, section: 0)
         signInView?.collectionView.selectItem(at: newIndexPath, animated: false, scrollPosition: .top)
-        
+
         if let cell = activeCell {
             signInView?.textField.text = cell.text
         }
-        
+
         cleanUp(after: newIndexPath)
     }
 }
