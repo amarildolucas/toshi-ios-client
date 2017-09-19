@@ -5,7 +5,6 @@ import TinyConstraints
 class PassphraseSignInCell: UICollectionViewCell {
 
     static let reuseIdentifier: String = "PassphraseSignInCell"
-    private lazy var passwordLabel = UILabel()
     private(set) var text: String = ""
     private(set) var match: String?
     private(set) var isFirstAndOnly: Bool = false
@@ -14,6 +13,7 @@ class PassphraseSignInCell: UICollectionViewCell {
     private let caretKerning: CGFloat = 1
     
     private lazy var backgroundImageView = UIImageView(image: UIImage(named: "sign-in-cell-background")?.stretchableImage(withLeftCapWidth: 18, topCapHeight: 18))
+    private lazy var passwordLabel = UILabel()
     
     private var caretView: UIView = {
         let view = UIView()
@@ -79,38 +79,22 @@ class PassphraseSignInCell: UICollectionViewCell {
     private func updateAttributedText(_ text: String, with match: String? = nil) {
         let emptyString = isFirstAndOnly ? Localized("passphrase_sign_in_placeholder") : Localized("passphrase_sign_in_ellipsis")
         let string = text.isEmpty ? emptyString : match ?? text
-
-        let attributes: [String: Any] = [
-            NSFontAttributeName: Theme.regular(size: 17),
-            NSForegroundColorAttributeName: Theme.greyTextColor
-        ]
-        
-        let matchingAttributes: [String: Any] = [
-            NSFontAttributeName: Theme.regular(size: 17),
-            NSForegroundColorAttributeName: Theme.darkTextColor
-        ]
-        
-        let errorAttributes: [String: Any] = [
-            NSFontAttributeName: Theme.regular(size: 17),
-            NSForegroundColorAttributeName: Theme.errorColor
-        ]
-
-        let attributedText = NSMutableAttributedString(string: string, attributes: attributes)
+        let attributedText = NSMutableAttributedString(string: string, attributes: [NSFontAttributeName: Theme.regular(size: 17), NSForegroundColorAttributeName: Theme.greyTextColor])
 
         if let match = match, let matchingRange = (match as NSString?)?.range(of: text, options: [.caseInsensitive, .anchored]) {
-            attributedText.addAttributes(matchingAttributes, range: matchingRange)
+            attributedText.addAttribute(NSForegroundColorAttributeName, value: Theme.darkTextColor, range: matchingRange)
             attributedText.addAttribute(NSKernAttributeName, value: caretKerning, range: NSRange(location: matchingRange.length - 1, length: 1))
             
             caretViewRightConstraint?.isActive = false
             caretViewLeftConstraint?.isActive = true
-            caretViewLeftConstraint?.constant = matchingFrame(for: matchingRange, in: attributedText).width - caretKerning
+            caretViewLeftConstraint?.constant = round(matchingFrame(for: matchingRange, in: attributedText).width) - caretKerning - 1
         } else if text.isEmpty {
             caretViewRightConstraint?.isActive = false
             caretViewLeftConstraint?.isActive = true
             caretViewLeftConstraint?.constant = 0
         } else {
             let errorRange = NSRange(location: 0, length: text.characters.count)
-            attributedText.addAttributes(errorAttributes, range: errorRange)
+            attributedText.addAttribute(NSForegroundColorAttributeName, value: Theme.errorColor, range: errorRange)
             
             caretViewLeftConstraint?.isActive = false
             caretViewRightConstraint?.isActive = true
