@@ -53,17 +53,16 @@ final class PassphraseSignInView: UIView {
         addSubview(headerView)
         addSubview(footerView)
         
-        headerView.top(to: self, offset: 20)
+        headerView.top(to: self, offset: 64)
         headerView.left(to: self)
         headerView.right(to: self)
-        headerView.height(PassphraseSignInHeaderView.height)
         
-        collectionView.topToBottom(of: headerView, offset: 10)
+        collectionView.topToBottom(of: headerView, offset: 50)
         collectionView.left(to: self)
         collectionView.right(to: self)
         collectionViewHeightConstraint = collectionView.height(36)
         
-        footerView.topToBottom(of: collectionView, offset: 10)
+        footerView.topToBottom(of: collectionView, offset: 5)
         footerView.left(to: self)
         footerView.right(to: self)
         

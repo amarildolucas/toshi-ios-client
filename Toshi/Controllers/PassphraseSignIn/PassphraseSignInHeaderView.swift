@@ -4,8 +4,6 @@ import TinyConstraints
 
 class PassphraseSignInHeaderView: UIView {
     
-    static let height: CGFloat = 160
-    
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.text = Localized("passphrase_sign_in_title")
@@ -27,5 +25,4 @@ class PassphraseSignInHeaderView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
