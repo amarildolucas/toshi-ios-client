@@ -92,12 +92,6 @@ final class PassphraseSignInView: UIView {
         let cells = indexPaths.flatMap { collectionView.cellForItem(at: $0) as? PassphraseSignInCell }
         let matches = cells.flatMap { $0.match }
         
-        if matches.count == 12 {
-            footerView.signInButton.title = Localized("passphrase_sign_in_button")
-            footerView.signInButton.isEnabled = true
-        } else {
-            footerView.signInButton.title = String(format: Localized(matches.count == 11 ? "passphrase_sign_in_button_placeholder_singular" : "passphrase_sign_in_button_placeholder"), 12 - matches.count)
-            footerView.signInButton.isEnabled = false
-        }
+        footerView.numberOfMatches = matches.count
     }
 }

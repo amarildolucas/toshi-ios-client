@@ -25,6 +25,18 @@ class PassphraseSignInFooterView: UIView {
 
         return view
     }()
+    
+    var numberOfMatches: Int = 0 {
+        didSet {
+            if numberOfMatches == PassphraseSignInViewController.maxItemCount {
+                signInButton.title = Localized("passphrase_sign_in_button")
+                signInButton.isEnabled = true
+            } else {
+                signInButton.title = String(format: Localized(numberOfMatches == (PassphraseSignInViewController.maxItemCount - 1) ? "passphrase_sign_in_button_placeholder_singular" : "passphrase_sign_in_button_placeholder"), PassphraseSignInViewController.maxItemCount - numberOfMatches)
+                signInButton.isEnabled = false
+            }
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
