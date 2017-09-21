@@ -26,20 +26,20 @@ class PassphraseSignInCell: UICollectionViewCell {
 
     override var isSelected: Bool {
         didSet {
+            guard isSelected != oldValue else { return }
             caretView.alpha = isSelected ? 1 : 0
+            backgroundImageView.isHidden = isSelected
 
             if let match = match, !isSelected {
                 updateAttributedText(match, with: match)
 
                 contentView.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)
 
-                UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 100, options: .easeOutFromCurrentStateWithUserInteraction, animations: {
-                    self.backgroundImageView.alpha = 1
+                UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 100, options: [.curveEaseOut, .allowUserInteraction], animations: {
                     self.contentView.transform = .identity
                 }, completion: nil)
 
             } else {
-                backgroundImageView.alpha = isSelected ? 0 : 1
                 updateAttributedText(text, with: match)
             }
         }

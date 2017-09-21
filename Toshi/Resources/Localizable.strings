@@ -152,6 +152,8 @@
 /* Passphrase Sign In */
 "passphrase_sign_in_title" = "Sign in with your Passphrase";
 "passphrase_sign_in_button" = "Sign in";
+"passphrase_sign_in_button_placeholder" = "%i more words";
+"passphrase_sign_in_button_placeholder_singular" = "%i more word";
 "passphrase_sign_in_explanation_title" = "How does it work?";
 "passphrase_sign_in_placeholder" = "Enter your Passphrase...";
 "passphrase_sign_in_ellipsis" = "...";

@@ -11,9 +11,8 @@ class PassphraseSignInFooterView: UIView {
         return view
     }()
 
-    private lazy var signInButton: ActionButton = {
+    private(set) lazy var signInButton: ActionButton = {
         let view = ActionButton(margin: 0)
-        view.title = Localized("passphrase_sign_in_button")
         view.setButtonStyle(.primary)
 
         return view

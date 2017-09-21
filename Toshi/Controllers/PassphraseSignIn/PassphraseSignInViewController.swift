@@ -7,6 +7,7 @@ final class PassphraseSignInViewController: UIViewController {
     var signInView: PassphraseSignInView? { return view as? PassphraseSignInView }
     var typed: [String] = [""]
     var itemCount: Int = 1
+    let maxItemCount: Int = 12
     var didJustAccept = false
     
     var activeIndexPath: IndexPath? {
@@ -91,6 +92,12 @@ final class PassphraseSignInViewController: UIViewController {
     
     fileprivate func addItem(at indexPath: IndexPath, completion: ((Bool) -> Swift.Void)? = nil) {
         
+        if itemCount == maxItemCount, let activeIndexPath = activeIndexPath {
+            signInView?.collectionView.deselectItem(at: activeIndexPath, animated: false)
+            
+            return
+        }
+        
         UIView.animate(withDuration: 0) {
             self.signInView?.collectionView.performBatchUpdates({
                 self.signInView?.collectionView.insertItems(at: [indexPath])
@@ -144,6 +151,8 @@ extension PassphraseSignInViewController: UICollectionViewDelegate {
         if let cell = activeCell, !didJustAccept {
             signInView?.textField.text = cell.text
             cleanUp(after: indexPath)
+        } else if itemCount == maxItemCount, let activeIndexPath = activeIndexPath {
+            signInView?.collectionView.deselectItem(at: activeIndexPath, animated: false)
         }
         
         didJustAccept = false
