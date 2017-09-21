@@ -469,7 +469,9 @@ NSString *const RequiresSignIn = @"RequiresSignIn";
         if (error){
             @throw error.localizedDescription;
         } else if (granted) {
-            [[UIApplication sharedApplication] registerForRemoteNotifications];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+            });
         }
     }];
 
