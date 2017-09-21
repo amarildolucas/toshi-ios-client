@@ -23,6 +23,10 @@ public class FavoritesNavigationController: UINavigationController {
         return .default
     }
 
+    fileprivate lazy var alertView: OfflineAlertView = {
+        self.defaultOfflineAlertView()
+    }()
+
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
     }
@@ -39,8 +43,16 @@ public class FavoritesNavigationController: UINavigationController {
         fatalError("")
     }
 
+    func defaultOfflineAlertView() -> OfflineAlertView {
+        let offlineAlertView = OfflineAlertView(withAutoLayout: true)
+
+        return offlineAlertView
+    }
+
     public override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupOfflineAlertView(hidden: true)
     }
 
     public override func popViewController(animated: Bool) -> UIViewController? {
@@ -56,5 +68,17 @@ public class FavoritesNavigationController: UINavigationController {
     public override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         UserDefaults.standard.removeObject(forKey: FavoritesNavigationController.selectedContactKey)
         return super.popToViewController(viewController, animated: animated)
+    }
+}
+
+extension FavoritesNavigationController: OfflineAlertDisplaying {
+    var offlineAlertView: OfflineAlertView {
+        return alertView
+    }
+
+    var offlineAlertViewConstraints: [NSLayoutConstraint] {
+        return [offlineAlertView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor),
+                offlineAlertView.leftAnchor.constraint(equalTo: view.leftAnchor),
+                offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
     }
 }

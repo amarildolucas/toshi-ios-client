@@ -43,6 +43,13 @@ open class TabBarController: UITabBarController {
         return IDAPIClient.shared
     }
 
+    fileprivate var reachabilityManager: ReachabilityManager {
+        let reachabilityManager = ReachabilityManager()
+        reachabilityManager.delegate = self
+
+        return reachabilityManager
+    }
+
     internal lazy var scannerController: ScannerViewController = {
         let controller = ScannerController(instructions: "Scan QR code", types: [.qrCode])
         controller.delegate = self
@@ -67,6 +74,7 @@ open class TabBarController: UITabBarController {
         super.init(nibName: nil, bundle: nil)
 
         delegate = self
+        reachabilityManager.register()
     }
 
     public required init?(coder _: NSCoder) {
@@ -266,4 +274,16 @@ extension TabBarController: ScannerViewControllerDelegate {
         }
     }
 
+}
+
+extension TabBarController: ReachabilityDelegate {
+    func reachabilityDidChange(toConnected connected: Bool) {
+        guard let currentOfflineAlertDisplayingNavigationController = currentNavigationController as? OfflineAlertDisplaying else { return }
+
+        if connected {
+            currentOfflineAlertDisplayingNavigationController.hideOfflineAlertView()
+        } else {
+            currentOfflineAlertDisplayingNavigationController.showOfflineAlertView()
+        }
+    }
 }

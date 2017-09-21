@@ -23,6 +23,10 @@ public class ChatsNavigationController: UINavigationController {
         return .default
     }
 
+    fileprivate lazy var alertView: OfflineAlertView = {
+        self.defaultOfflineAlertView()
+    }()
+
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
     }
@@ -47,6 +51,12 @@ public class ChatsNavigationController: UINavigationController {
         fatalError("")
     }
 
+    func defaultOfflineAlertView() -> OfflineAlertView {
+        let offlineAlertView = OfflineAlertView(withAutoLayout: true)
+
+        return offlineAlertView
+    }
+
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,6 +65,8 @@ public class ChatsNavigationController: UINavigationController {
 
         navigationBar.insertSubview(backgroundBlur, at: 0)
         backgroundBlur.edges(to: navigationBar, insets: UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0))
+
+        setupOfflineAlertView(hidden: true)
     }
 
     public override func viewDidLayoutSubviews() {
@@ -115,5 +127,17 @@ public class ChatsNavigationController: UINavigationController {
         UserDefaults.standard.removeObject(forKey: selectedThreadAddressKey)
 
         return super.popToViewController(viewController, animated: animated)
+    }
+}
+
+extension ChatsNavigationController: OfflineAlertDisplaying {
+    var offlineAlertView: OfflineAlertView {
+        return alertView
+    }
+
+    var offlineAlertViewConstraints: [NSLayoutConstraint] {
+        return [offlineAlertView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor),
+                offlineAlertView.leftAnchor.constraint(equalTo: view.leftAnchor),
+                offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
     }
 }

@@ -23,6 +23,16 @@ public class BrowseNavigationController: UINavigationController {
         return .default
     }
 
+    fileprivate lazy var alertView: OfflineAlertView = {
+        self.defaultOfflineAlertView()
+    }()
+
+    func defaultOfflineAlertView() -> OfflineAlertView {
+        let offlineAlertView = OfflineAlertView(withAutoLayout: true)
+
+        return offlineAlertView
+    }
+
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
     }
@@ -41,6 +51,8 @@ public class BrowseNavigationController: UINavigationController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupOfflineAlertView(hidden: true)
 
         // TODO: move restoration to the tabbar controller, so we only restore the currently selected.
         if let appData = UserDefaults.standard.data(forKey: BrowseNavigationController.selectedAppKey) {
@@ -78,5 +90,17 @@ public class BrowseNavigationController: UINavigationController {
     public override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         UserDefaults.standard.removeObject(forKey: BrowseNavigationController.selectedAppKey)
         return super.popToViewController(viewController, animated: animated)
+    }
+}
+
+extension BrowseNavigationController: OfflineAlertDisplaying {
+    var offlineAlertView: OfflineAlertView {
+        return alertView
+    }
+
+    var offlineAlertViewConstraints: [NSLayoutConstraint] {
+        return [offlineAlertView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor),
+                offlineAlertView.leftAnchor.constraint(equalTo: view.leftAnchor),
+                offlineAlertView.rightAnchor.constraint(equalTo: view.rightAnchor)]
     }
 }
