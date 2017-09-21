@@ -94,6 +94,11 @@ class BrowseController: SearchableCollectionController {
 
         let searchField = searchBar.value(forKey: "searchField") as? UITextField
         searchField?.backgroundColor = Theme.inputFieldBackgroundColor
+        
+        let navigationItem = UINavigationItem()
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = self.searchController
+        }
 
         addSubviewsAndConstraints()
     }
