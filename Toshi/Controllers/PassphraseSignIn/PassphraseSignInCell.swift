@@ -125,8 +125,4 @@ class PassphraseSignInCell: UICollectionViewCell {
 
         return layoutManager.boundingRect(forGlyphRange: glyphRange, in: textContainer)
     }
-
-    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        return super.preferredLayoutAttributesFitting(layoutAttributes)
-    }
 }
