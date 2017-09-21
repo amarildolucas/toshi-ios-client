@@ -7,6 +7,7 @@ final class PassphraseSignInViewController: UIViewController {
     var signInView: PassphraseSignInView? { return view as? PassphraseSignInView }
     var typed: [String] = [""]
     var itemCount: Int = 1
+    var didJustAccept = false
     
     var activeIndexPath: IndexPath? {
         if let selectedCell = signInView?.collectionView.visibleCells.first(where: { $0.isSelected }) {
@@ -68,6 +69,26 @@ final class PassphraseSignInViewController: UIViewController {
         return filtered?.first
     }
     
+    fileprivate func acceptItem(at indexPath: IndexPath, completion: ((Bool) -> Swift.Void)? = nil) {
+        signInView?.textField.text = nil
+        
+        let newIndexPath = IndexPath(item: itemCount, section: 0)
+        UIView.performWithoutAnimation {
+            addItem(at: newIndexPath, completion: { [weak self] _ in
+                UIView.performWithoutAnimation {
+                    self?.cleanUp(after: newIndexPath, completion: { [weak self] _ in
+                        guard let itemCount = self?.itemCount else { return }
+                        let newIndexPath = IndexPath(item: itemCount - 1, section: 0)
+                        self?.signInView?.collectionView.selectItem(at: newIndexPath, animated: false, scrollPosition: .top)
+                        UIView.performWithoutAnimation {
+                            self?.cleanUp(after: newIndexPath, completion: completion)
+                        }
+                    })
+                }
+            })
+        }
+    }
+    
     fileprivate func addItem(at indexPath: IndexPath, completion: ((Bool) -> Swift.Void)? = nil) {
         
         UIView.animate(withDuration: 0) {
@@ -104,13 +125,28 @@ final class PassphraseSignInViewController: UIViewController {
 
 extension PassphraseSignInViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         
-        if let cell = activeCell {
-            signInView?.textField.text = cell.text
+        if let activeIndexPath = activeIndexPath, indexPath == activeIndexPath {
+            didJustAccept = true
+            acceptItem(at: indexPath, completion: { _ in
+                if let indexPath = self.activeIndexPath {
+                    self.cleanUp(after: indexPath)
+                }
+            })
         }
         
-        cleanUp(after: indexPath)
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let cell = activeCell, !didJustAccept {
+            signInView?.textField.text = cell.text
+            cleanUp(after: indexPath)
+        }
+        
+        didJustAccept = false
     }
 }
 
@@ -137,23 +173,7 @@ extension PassphraseSignInViewController: UITextFieldDelegate {
         guard let indexPath = activeIndexPath else { return false }
         
         if string == " " || string == "\n" {
-            signInView?.textField.text = nil
-            
-            let newIndexPath = IndexPath(item: itemCount, section: 0)
-            UIView.performWithoutAnimation {
-                addItem(at: newIndexPath, completion: { [weak self] _ in
-                    UIView.performWithoutAnimation {
-                        self?.cleanUp(after: newIndexPath, completion: { [weak self] _ in
-                            guard let itemCount = self?.itemCount else { return }
-                            let newIndexPath = IndexPath(item: itemCount - 1, section: 0)
-                            self?.signInView?.collectionView.selectItem(at: newIndexPath, animated: false, scrollPosition: .top)
-                            UIView.performWithoutAnimation {
-                                self?.cleanUp(after: newIndexPath)
-                            }
-                        })
-                    }
-                })
-            }
+            acceptItem(at: indexPath)
             
             return false
         }
