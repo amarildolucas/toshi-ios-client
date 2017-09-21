@@ -1826,18 +1826,21 @@
 		D197B30022F9B4D9D27325F7 /* getTopRatedApps.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B06C962A9EC5993916F9 /* getTopRatedApps.json */; };
 		D197B341D7AC04907550BFA3 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D197BD2C5E7FC428D7ADB559 /* TestAppDelegate.m */; };
 		D197B35BF9744D2F37972747 /* EthereumAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B33D03FC3E507BE3B3C1 /* EthereumAPIClientTests.swift */; };
+		D197B3CEF63EDE26D11F3F32 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BB02C1FCC52F69B81E12 /* ReachabilityManager.swift */; };
 		D197B401E977724E946A55BE /* ActiveNetworkDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BAEA583CAF9862D17B38 /* ActiveNetworkDisplaying.swift */; };
 		D197B4425A9FE7A36B983DE1 /* getLatestPublicUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B707B59B3F92F8A4B3EC /* getLatestPublicUsers.json */; };
 		D197B54E550A80E09BFE6501 /* RatingsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F54A7221E951F1500FEB67B /* RatingsClient.swift */; };
 		D197B5E0F04D0A7529EC6342 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D197BD2C5E7FC428D7ADB559 /* TestAppDelegate.m */; };
 		D197B61F77E710DF67E4FBD2 /* UINotificationName+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B669EF87D9D6642E12BA /* UINotificationName+Additions.swift */; };
 		D197B637C5223A239BA0EF67 /* getTopRatedPublicUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = D197BA847282226E502C8CEE /* getTopRatedPublicUsers.json */; };
+		D197B683AEBC4A7B8F0FF197 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BB02C1FCC52F69B81E12 /* ReachabilityManager.swift */; };
 		D197B6A1519FAB078F9174F4 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BB4FC8D408B73FE253E5 /* BlurView.swift */; };
 		D197B6C89BDD1FE57CA3DA33 /* RatingsClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B6D88C3CCC7B7A890925 /* RatingsClientTests.swift */; };
 		D197B6CAA22DFAA0B0FFE15D /* sendSignedTransaction.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B654F730E653B7C6F444 /* sendSignedTransaction.json */; };
 		D197B6D6BB93E0F67FE998CE /* OfflineAlertDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B827D378D5A6CE7A52D0 /* OfflineAlertDisplaying.swift */; };
 		D197B6D91E419A23890C7E8B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BB4FC8D408B73FE253E5 /* BlurView.swift */; };
 		D197B74275EBC3A229F0D4D9 /* timestamp.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B5835BCEB0D7A2DA6967 /* timestamp.json */; };
+		D197B76039E4B9C45F980CCF /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BB02C1FCC52F69B81E12 /* ReachabilityManager.swift */; };
 		D197B80A67FA2271BE1C9621 /* YapDatabaseViewConnection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B494213B9F6EC5413D88 /* YapDatabaseViewConnection+Additions.swift */; };
 		D197B83F0A9396CF2E7628D5 /* ActiveNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B6E47F5F979A8C154E9A /* ActiveNetworkView.swift */; };
 		D197B8B87F4A0DCA761DE9D6 /* retrieveUser.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B8E798FCD39B97824BBA /* retrieveUser.json */; };
@@ -1853,6 +1856,7 @@
 		D197BBDFE322BAFD2D036076 /* OfflineAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BD136059B5C238CB3425 /* OfflineAlertView.swift */; };
 		D197BC32BA4D952C0E815F18 /* ActiveNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B6E47F5F979A8C154E9A /* ActiveNetworkView.swift */; };
 		D197BD8E4D43B3EFF276694E /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D197BD2C5E7FC428D7ADB559 /* TestAppDelegate.m */; };
+		D197BDD5424805C3D7F2163A /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BB02C1FCC52F69B81E12 /* ReachabilityManager.swift */; };
 		D197BDE13FECEEDB7511144E /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = D197B12C40488CB1523BB212 /* user.json */; };
 		D197BE71058CA3432F48BF1C /* AppsAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B00DD27312EDFE1B9ECB /* AppsAPIClientTests.swift */; };
 		D197BEB965F76FE14EF90555 /* ActiveNetworkDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BAEA583CAF9862D17B38 /* ActiveNetworkDisplaying.swift */; };
@@ -1875,6 +1879,9 @@
 		E676835A1F4467450014B2D4 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E67683581F44673E0014B2D4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6B8577A1F25F3D700979650 /* AddressChangeAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B857791F25F3D700979650 /* AddressChangeAlertController.swift */; };
 		E6B8577B1F25F3D700979650 /* AddressChangeAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B857791F25F3D700979650 /* AddressChangeAlertController.swift */; };
+		E6BBC6631F74045C0085FF1F /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBC6621F74045C0085FF1F /* Reachability.framework */; };
+		E6BBC6641F7404630085FF1F /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBC6621F74045C0085FF1F /* Reachability.framework */; };
+		E6BBC6651F7404730085FF1F /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBC6621F74045C0085FF1F /* Reachability.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2961,6 +2968,7 @@
 		D197B8E798FCD39B97824BBA /* retrieveUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = retrieveUser.json; sourceTree = "<group>"; };
 		D197BA847282226E502C8CEE /* getTopRatedPublicUsers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getTopRatedPublicUsers.json; sourceTree = "<group>"; };
 		D197BAEA583CAF9862D17B38 /* ActiveNetworkDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveNetworkDisplaying.swift; sourceTree = "<group>"; };
+		D197BB02C1FCC52F69B81E12 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		D197BB03F2BFF88371C66F25 /* createUnsignedTransaction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = createUnsignedTransaction.json; sourceTree = "<group>"; };
 		D197BB0710786F9F642F4318 /* score.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = score.json; sourceTree = "<group>"; };
 		D197BB4FC8D408B73FE253E5 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
@@ -2973,6 +2981,7 @@
 		E67683551F4464980014B2D4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		E67683581F44673E0014B2D4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E6B857791F25F3D700979650 /* AddressChangeAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressChangeAlertController.swift; sourceTree = "<group>"; };
+		E6BBC6621F74045C0085FF1F /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		F878FE03459983FE633C60EF /* Pods-CocoaPods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPods-Tests/Pods-CocoaPods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -3033,6 +3042,7 @@
 				9FF9579F1EEEB7BA00DDCBD8 /* SweetSwift.framework in Frameworks */,
 				9FF957A01EEEB7BA00DDCBD8 /* ImagePicker.framework in Frameworks */,
 				9FF957A11EEEB7BA00DDCBD8 /* HDWallet.framework in Frameworks */,
+				E6BBC6651F7404730085FF1F /* Reachability.framework in Frameworks */,
 				C1128E2CDD482DB9BE1BF5A3 /* libPods-CocoaPods-Distribution.a in Frameworks */,
 				339C48D508E325D721B97EA9 /* libPods-CocoaPods-Distribution.a in Frameworks */,
 			);
@@ -3055,6 +3065,7 @@
 				2BAB90B31EC1198B005D98C6 /* CoreMedia.framework in Frameworks */,
 				2BAB90B11EC11982005D98C6 /* CoreVideo.framework in Frameworks */,
 				2BAB90AF1EC11963005D98C6 /* Photos.framework in Frameworks */,
+				E6BBC6631F74045C0085FF1F /* Reachability.framework in Frameworks */,
 				2BAB90A71EC1194B005D98C6 /* Accelerate.framework in Frameworks */,
 				2BAB90A81EC1194B005D98C6 /* AudioToolbox.framework in Frameworks */,
 				2BAB90A91EC1194B005D98C6 /* CoreGraphics.framework in Frameworks */,
@@ -3121,6 +3132,7 @@
 				A9603F531F4DABDC00BF57B1 /* SweetFoundation.framework in Frameworks */,
 				A9603F541F4DABDC00BF57B1 /* AwesomeCache.framework in Frameworks */,
 				A9603F551F4DABDC00BF57B1 /* HPGrowingTextView.framework in Frameworks */,
+				E6BBC6641F7404630085FF1F /* Reachability.framework in Frameworks */,
 				A9603F561F4DABDC00BF57B1 /* TinyConstraints.framework in Frameworks */,
 				A9603F571F4DABDC00BF57B1 /* SweetUIKit.framework in Frameworks */,
 				A9603F581F4DABDC00BF57B1 /* BouncyLayout.framework in Frameworks */,
@@ -3205,6 +3217,7 @@
 		27842ECF00E36BC79A5918DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6BBC6621F74045C0085FF1F /* Reachability.framework */,
 				E67683581F44673E0014B2D4 /* Nimble.framework */,
 				E67683551F4464980014B2D4 /* Quick.framework */,
 				2BAB90C91EC120A8005D98C6 /* libc++.tbd */,
@@ -4196,6 +4209,7 @@
 				9F9238B41E24F1D2004BEEE0 /* Supporting Files */,
 				9FCDBAE81E28FD5600A70E07 /* Theme */,
 				9F9238CE1E24F3EB004BEEE0 /* Views */,
+				D197BCEC97DDF7C3EE23594B /* Managers */,
 			);
 			path = Toshi;
 			sourceTree = "<group>";
@@ -4701,6 +4715,14 @@
 			path = ExchangeRateAPIClient;
 			sourceTree = "<group>";
 		};
+		D197BCEC97DDF7C3EE23594B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D197BB02C1FCC52F69B81E12 /* ReachabilityManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		E1A95D581E6F031F002762DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -5098,6 +5120,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/WebRTC.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TinyConstraints.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BouncyLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReachabilitySwift.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
@@ -5273,6 +5296,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/WebRTC.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TinyConstraints.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BouncyLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReachabilitySwift.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
@@ -5409,6 +5433,7 @@
 				D197B54E550A80E09BFE6501 /* RatingsClient.swift in Sources */,
 				D197BB5265BB1DA3032B68AA /* ExchangeRateAPIClientTests.swift in Sources */,
 				D197B133E8FE4FD69F1AA511 /* IDAPIClientTests.swift in Sources */,
+				D197B76039E4B9C45F980CCF /* ReachabilityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5930,6 +5955,7 @@
 				D197B341D7AC04907550BFA3 /* TestAppDelegate.m in Sources */,
 				D197B6D6BB93E0F67FE998CE /* OfflineAlertDisplaying.swift in Sources */,
 				D197B0D75181D93C82A98BD6 /* OfflineAlertView.swift in Sources */,
+				D197BDD5424805C3D7F2163A /* ReachabilityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6453,6 +6479,7 @@
 				D197B5E0F04D0A7529EC6342 /* TestAppDelegate.m in Sources */,
 				D197B0D6785893BC3224D40D /* OfflineAlertDisplaying.swift in Sources */,
 				D197B9D47550D571260DB146 /* OfflineAlertView.swift in Sources */,
+				D197B3CEF63EDE26D11F3F32 /* ReachabilityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6974,6 +7001,7 @@
 				A9603F371F4DABDC00BF57B1 /* TestAppDelegate.m in Sources */,
 				D197BF10EA25C4BEEC42204E /* OfflineAlertDisplaying.swift in Sources */,
 				D197BBDFE322BAFD2D036076 /* OfflineAlertView.swift in Sources */,
+				D197B683AEBC4A7B8F0FF197 /* ReachabilityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
