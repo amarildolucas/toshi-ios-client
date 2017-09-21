@@ -53,14 +53,19 @@ public class ChatsNavigationController: UINavigationController {
         navigationBar.barStyle = .default
         navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
 
-        navigationBar.insertSubview(backgroundBlur, at: 0)
-        backgroundBlur.edges(to: navigationBar, insets: UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0))
+        guard #available(iOS 11.0, *) else {
+            navigationBar.insertSubview(backgroundBlur, at: 0)
+            backgroundBlur.edges(to: navigationBar, insets: UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0))
+            return
+        }
     }
-
+    
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        navigationBar.sendSubview(toBack: backgroundBlur)
+        if #available(iOS 11.0, *) {
+            navigationBar.sendSubview(toBack: backgroundBlur)
+        }
     }
 
     public func openThread(withAddress address: String, completion: ((Any?) -> Void)? = nil) {
