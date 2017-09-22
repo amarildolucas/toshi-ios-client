@@ -1110,7 +1110,6 @@
 		9FF957951EEEB7BA00DDCBD8 /* HPGrowingTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF8071EB36A7F002D0293 /* HPGrowingTextView.framework */; };
 		9FF957961EEEB7BA00DDCBD8 /* TinyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9202E371ED82AAD0036E9B7 /* TinyConstraints.framework */; };
 		9FF957981EEEB7BA00DDCBD8 /* SweetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF80E1EB36A7F002D0293 /* SweetUIKit.framework */; };
-		9FF957991EEEB7BA00DDCBD8 /* BouncyLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9202E361ED82AAD0036E9B7 /* BouncyLayout.framework */; };
 		9FF9579A1EEEB7BA00DDCBD8 /* Teapot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF80F1EB36A7F002D0293 /* Teapot.framework */; };
 		9FF9579B1EEEB7BA00DDCBD8 /* Formulaic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF8051EB36A7F002D0293 /* Formulaic.framework */; };
 		9FF9579C1EEEB7BA00DDCBD8 /* NoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF80A1EB36A7F002D0293 /* NoChat.framework */; };
@@ -1143,8 +1142,6 @@
 		A9191DCC1F22040B00498A4F /* AdvancedSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9191DC51F2203DD00498A4F /* AdvancedSettings.storyboard */; };
 		A9191DCD1F22040E00498A4F /* AdvancedSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9191DC61F2203DD00498A4F /* AdvancedSettingsController.swift */; };
 		A9191DD01F2220C100498A4F /* BalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9191DCF1F2220C100498A4F /* BalanceController.swift */; };
-		A9202E381ED82AAD0036E9B7 /* BouncyLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9202E361ED82AAD0036E9B7 /* BouncyLayout.framework */; };
-		A9202E3D1ED82AFC0036E9B7 /* BouncyLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9202E361ED82AAD0036E9B7 /* BouncyLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9202E3E1ED82AFC0036E9B7 /* TinyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9202E371ED82AAD0036E9B7 /* TinyConstraints.framework */; };
 		A9202E3F1ED82AFC0036E9B7 /* TinyConstraints.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9202E371ED82AAD0036E9B7 /* TinyConstraints.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9202E591ED84F6A0036E9B7 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9202E4B1ED84F6A0036E9B7 /* ImageCell.swift */; };
@@ -1700,7 +1697,6 @@
 		A9603F551F4DABDC00BF57B1 /* HPGrowingTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF8071EB36A7F002D0293 /* HPGrowingTextView.framework */; };
 		A9603F561F4DABDC00BF57B1 /* TinyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9202E371ED82AAD0036E9B7 /* TinyConstraints.framework */; };
 		A9603F571F4DABDC00BF57B1 /* SweetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF80E1EB36A7F002D0293 /* SweetUIKit.framework */; };
-		A9603F581F4DABDC00BF57B1 /* BouncyLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9202E361ED82AAD0036E9B7 /* BouncyLayout.framework */; };
 		A9603F591F4DABDC00BF57B1 /* Teapot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF80F1EB36A7F002D0293 /* Teapot.framework */; };
 		A9603F5A1F4DABDC00BF57B1 /* Formulaic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF8051EB36A7F002D0293 /* Formulaic.framework */; };
 		A9603F5B1F4DABDC00BF57B1 /* NoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FF80A1EB36A7F002D0293 /* NoChat.framework */; };
@@ -1873,15 +1869,16 @@
 		E60A52AF1F28E6A60032CAC0 /* EthereumAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145666051E30D31A00E52027 /* EthereumAPIClient.swift */; };
 		E60A52B01F28E6FF0032CAC0 /* NetworkSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B002D8E1F17BA1800D92240 /* NetworkSwitcher.swift */; };
 		E60A52B11F28E7830032CAC0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9202E561ED84F6A0036E9B7 /* Extensions.swift */; };
+		E638C9D31F75176D00200354 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E638C9D21F75176D00200354 /* Reachability.framework */; };
+		E638C9D41F75177B00200354 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E638C9D21F75176D00200354 /* Reachability.framework */; };
+		E638C9D51F75179200200354 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E638C9D21F75176D00200354 /* Reachability.framework */; };
+		E638C9D61F751C9700200354 /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E638C9D21F75176D00200354 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E67683561F4464980014B2D4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67683551F4464980014B2D4 /* Quick.framework */; };
 		E67683571F44649F0014B2D4 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E67683551F4464980014B2D4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E67683591F44673E0014B2D4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67683581F44673E0014B2D4 /* Nimble.framework */; };
 		E676835A1F4467450014B2D4 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E67683581F44673E0014B2D4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6B8577A1F25F3D700979650 /* AddressChangeAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B857791F25F3D700979650 /* AddressChangeAlertController.swift */; };
 		E6B8577B1F25F3D700979650 /* AddressChangeAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B857791F25F3D700979650 /* AddressChangeAlertController.swift */; };
-		E6BBC6631F74045C0085FF1F /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBC6621F74045C0085FF1F /* Reachability.framework */; };
-		E6BBC6641F7404630085FF1F /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBC6621F74045C0085FF1F /* Reachability.framework */; };
-		E6BBC6651F7404730085FF1F /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BBC6621F74045C0085FF1F /* Reachability.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1901,9 +1898,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E638C9D61F751C9700200354 /* Reachability.framework in Embed Frameworks */,
 				9FA12BE91E65A151003705F6 /* RevealServer.framework in Embed Frameworks */,
 				9F3FF8321EB36A8E002D0293 /* AwesomeCache.framework in Embed Frameworks */,
-				A9202E3D1ED82AFC0036E9B7 /* BouncyLayout.framework in Embed Frameworks */,
 				9F3FF8331EB36A8E002D0293 /* CameraScanner.framework in Embed Frameworks */,
 				9F3FF8341EB36A8E002D0293 /* EtherealCereal.framework in Embed Frameworks */,
 				9F3FF8351EB36A8E002D0293 /* Formulaic.framework in Embed Frameworks */,
@@ -2900,7 +2897,6 @@
 		A9191DC61F2203DD00498A4F /* AdvancedSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsController.swift; sourceTree = "<group>"; };
 		A9191DC81F2203DD00498A4F /* NetworkSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSettingsController.swift; sourceTree = "<group>"; };
 		A9191DCF1F2220C100498A4F /* BalanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceController.swift; sourceTree = "<group>"; };
-		A9202E361ED82AAD0036E9B7 /* BouncyLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BouncyLayout.framework; path = Carthage/Build/iOS/BouncyLayout.framework; sourceTree = "<group>"; };
 		A9202E371ED82AAD0036E9B7 /* TinyConstraints.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TinyConstraints.framework; path = Carthage/Build/iOS/TinyConstraints.framework; sourceTree = "<group>"; };
 		A9202E4B1ED84F6A0036E9B7 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		A9202E4C1ED84F6A0036E9B7 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
@@ -2978,10 +2974,10 @@
 		D197BDA113837D7DCFE1A66F /* ExchangeRateAPIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateAPIClientTests.swift; sourceTree = "<group>"; };
 		D197BF349118AC9D1FE859C4 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		E1A95D541E6EF092002762DA /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		E638C9D21F75176D00200354 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		E67683551F4464980014B2D4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		E67683581F44673E0014B2D4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E6B857791F25F3D700979650 /* AddressChangeAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressChangeAlertController.swift; sourceTree = "<group>"; };
-		E6BBC6621F74045C0085FF1F /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		F878FE03459983FE633C60EF /* Pods-CocoaPods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPods-Tests/Pods-CocoaPods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -3012,6 +3008,7 @@
 				9FF9577F1EEEB7BA00DDCBD8 /* PhotosUI.framework in Frameworks */,
 				9FF957801EEEB7BA00DDCBD8 /* AVKit.framework in Frameworks */,
 				9FF957811EEEB7BA00DDCBD8 /* OpenGLES.framework in Frameworks */,
+				9FF9579A1EEEB7BA00DDCBD8 /* Teapot.framework in Frameworks */,
 				9FF957821EEEB7BA00DDCBD8 /* CoreMedia.framework in Frameworks */,
 				9FF957831EEEB7BA00DDCBD8 /* CoreVideo.framework in Frameworks */,
 				9FF957841EEEB7BA00DDCBD8 /* Photos.framework in Frameworks */,
@@ -3023,6 +3020,7 @@
 				9FF9578A1EEEB7BA00DDCBD8 /* QuartzCore.framework in Frameworks */,
 				9FF9578B1EEEB7BA00DDCBD8 /* VideoToolbox.framework in Frameworks */,
 				9FF9578C1EEEB7BA00DDCBD8 /* AVFoundation.framework in Frameworks */,
+				E638C9D51F75179200200354 /* Reachability.framework in Frameworks */,
 				9FF9578D1EEEB7BA00DDCBD8 /* UIKit.framework in Frameworks */,
 				9FF9578E1EEEB7BA00DDCBD8 /* CameraScanner.framework in Frameworks */,
 				9FF957901EEEB7BA00DDCBD8 /* EtherealCereal.framework in Frameworks */,
@@ -3033,8 +3031,6 @@
 				9FF957951EEEB7BA00DDCBD8 /* HPGrowingTextView.framework in Frameworks */,
 				9FF957961EEEB7BA00DDCBD8 /* TinyConstraints.framework in Frameworks */,
 				9FF957981EEEB7BA00DDCBD8 /* SweetUIKit.framework in Frameworks */,
-				9FF957991EEEB7BA00DDCBD8 /* BouncyLayout.framework in Frameworks */,
-				9FF9579A1EEEB7BA00DDCBD8 /* Teapot.framework in Frameworks */,
 				9FF9579B1EEEB7BA00DDCBD8 /* Formulaic.framework in Frameworks */,
 				9FF9579C1EEEB7BA00DDCBD8 /* NoChat.framework in Frameworks */,
 				9FF9579D1EEEB7BA00DDCBD8 /* YYText.framework in Frameworks */,
@@ -3042,7 +3038,6 @@
 				9FF9579F1EEEB7BA00DDCBD8 /* SweetSwift.framework in Frameworks */,
 				9FF957A01EEEB7BA00DDCBD8 /* ImagePicker.framework in Frameworks */,
 				9FF957A11EEEB7BA00DDCBD8 /* HDWallet.framework in Frameworks */,
-				E6BBC6651F7404730085FF1F /* Reachability.framework in Frameworks */,
 				C1128E2CDD482DB9BE1BF5A3 /* libPods-CocoaPods-Distribution.a in Frameworks */,
 				339C48D508E325D721B97EA9 /* libPods-CocoaPods-Distribution.a in Frameworks */,
 			);
@@ -3065,7 +3060,6 @@
 				2BAB90B31EC1198B005D98C6 /* CoreMedia.framework in Frameworks */,
 				2BAB90B11EC11982005D98C6 /* CoreVideo.framework in Frameworks */,
 				2BAB90AF1EC11963005D98C6 /* Photos.framework in Frameworks */,
-				E6BBC6631F74045C0085FF1F /* Reachability.framework in Frameworks */,
 				2BAB90A71EC1194B005D98C6 /* Accelerate.framework in Frameworks */,
 				2BAB90A81EC1194B005D98C6 /* AudioToolbox.framework in Frameworks */,
 				2BAB90A91EC1194B005D98C6 /* CoreGraphics.framework in Frameworks */,
@@ -3085,7 +3079,6 @@
 				9F3FF81C1EB36A7F002D0293 /* HPGrowingTextView.framework in Frameworks */,
 				A9202E3E1ED82AFC0036E9B7 /* TinyConstraints.framework in Frameworks */,
 				9F3FF82A1EB36A7F002D0293 /* SweetUIKit.framework in Frameworks */,
-				A9202E381ED82AAD0036E9B7 /* BouncyLayout.framework in Frameworks */,
 				9F3FF82C1EB36A7F002D0293 /* Teapot.framework in Frameworks */,
 				9F3FF8181EB36A7F002D0293 /* Formulaic.framework in Frameworks */,
 				9F3FF8221EB36A7F002D0293 /* NoChat.framework in Frameworks */,
@@ -3094,6 +3087,7 @@
 				9F3FF8281EB36A7F002D0293 /* SweetSwift.framework in Frameworks */,
 				9F3FF81E1EB36A7F002D0293 /* ImagePicker.framework in Frameworks */,
 				9F3FF81A1EB36A7F002D0293 /* HDWallet.framework in Frameworks */,
+				E638C9D31F75176D00200354 /* Reachability.framework in Frameworks */,
 				7EBE06112DBBCDC47098370B /* libPods-CocoaPods-Development.a in Frameworks */,
 				1C50239B159516A29E078E7B /* libPods-CocoaPods-Development.a in Frameworks */,
 			);
@@ -3112,6 +3106,7 @@
 				A9603F3F1F4DABDC00BF57B1 /* GLKit.framework in Frameworks */,
 				A9603F401F4DABDC00BF57B1 /* PhotosUI.framework in Frameworks */,
 				A9603F411F4DABDC00BF57B1 /* AVKit.framework in Frameworks */,
+				A9603F571F4DABDC00BF57B1 /* SweetUIKit.framework in Frameworks */,
 				A9603F421F4DABDC00BF57B1 /* OpenGLES.framework in Frameworks */,
 				A9603F431F4DABDC00BF57B1 /* CoreMedia.framework in Frameworks */,
 				A9603F441F4DABDC00BF57B1 /* CoreVideo.framework in Frameworks */,
@@ -3132,12 +3127,10 @@
 				A9603F531F4DABDC00BF57B1 /* SweetFoundation.framework in Frameworks */,
 				A9603F541F4DABDC00BF57B1 /* AwesomeCache.framework in Frameworks */,
 				A9603F551F4DABDC00BF57B1 /* HPGrowingTextView.framework in Frameworks */,
-				E6BBC6641F7404630085FF1F /* Reachability.framework in Frameworks */,
 				A9603F561F4DABDC00BF57B1 /* TinyConstraints.framework in Frameworks */,
-				A9603F571F4DABDC00BF57B1 /* SweetUIKit.framework in Frameworks */,
-				A9603F581F4DABDC00BF57B1 /* BouncyLayout.framework in Frameworks */,
 				A9603F591F4DABDC00BF57B1 /* Teapot.framework in Frameworks */,
 				A9603F5A1F4DABDC00BF57B1 /* Formulaic.framework in Frameworks */,
+				E638C9D41F75177B00200354 /* Reachability.framework in Frameworks */,
 				A9603F5B1F4DABDC00BF57B1 /* NoChat.framework in Frameworks */,
 				A9603F5C1F4DABDC00BF57B1 /* YYText.framework in Frameworks */,
 				A9603F5D1F4DABDC00BF57B1 /* PromiseKit.framework in Frameworks */,
@@ -3217,7 +3210,7 @@
 		27842ECF00E36BC79A5918DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E6BBC6621F74045C0085FF1F /* Reachability.framework */,
+				E638C9D21F75176D00200354 /* Reachability.framework */,
 				E67683581F44673E0014B2D4 /* Nimble.framework */,
 				E67683551F4464980014B2D4 /* Quick.framework */,
 				2BAB90C91EC120A8005D98C6 /* libc++.tbd */,
@@ -3240,7 +3233,6 @@
 				2BAB90A41EC1194B005D98C6 /* ImageIO.framework */,
 				2BAB90A51EC1194B005D98C6 /* QuartzCore.framework */,
 				2BAB90A61EC1194B005D98C6 /* VideoToolbox.framework */,
-				A9202E361ED82AAD0036E9B7 /* BouncyLayout.framework */,
 				A9202E371ED82AAD0036E9B7 /* TinyConstraints.framework */,
 				9F3FF8021EB36A7F002D0293 /* AwesomeCache.framework */,
 				9F3FF8031EB36A7F002D0293 /* CameraScanner.framework */,
@@ -4178,6 +4170,7 @@
 				14147EA21E8119F0006BD47B /* Tests */,
 				9F9238B31E24F1D2004BEEE0 /* Toshi */,
 				9FC848301E5DB1B600568F1B /* Toshi.entitlements */,
+				E638C9CD1F74F9EE00200354 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -4734,6 +4727,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E638C9CD1F74F9EE00200354 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				2F1B2E5A8052289054B2DCDD /* libPods-CocoaPods-Development.a */,
+				7E67E3F2BFB7B0171BF61B30 /* libPods-CocoaPods-Distribution.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -5119,8 +5121,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AwesomeCache.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/WebRTC.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TinyConstraints.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/BouncyLayout.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReachabilitySwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
@@ -5295,8 +5296,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AwesomeCache.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/WebRTC.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TinyConstraints.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/BouncyLayout.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReachabilitySwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
