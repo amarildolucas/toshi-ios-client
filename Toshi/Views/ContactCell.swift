@@ -106,12 +106,12 @@ class ContactCell: UITableViewCell {
 
         nameLabel.heightAnchor.constraint(equalToConstant: height).isActive = true
         nameLabel.topAnchor.constraint(greaterThanOrEqualTo: contentView.topAnchor, constant: margin).isActive = true
-        nameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: margin).isActive = true
+        nameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: 10).isActive = true
         nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -margin).isActive = true
 
         usernameLabel.heightAnchor.constraint(equalToConstant: height).isActive = true
-        usernameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: interLabelMargin).isActive = true
-        usernameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: margin).isActive = true
+        usernameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
+        usernameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: 10).isActive = true
         usernameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -margin).isActive = true
         usernameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -margin).isActive = true
 
