@@ -153,8 +153,9 @@ NSString *const RequiresSignIn = @"RequiresSignIn";
 
          exit(0);
     } failure:^(NSError *error) {
-        UIAlertController *alert = [UIAlertController dismissableAlertWithTitle:@"Could not sign out" message:@"Error attempting to unregister from chat service. Our engineers are looking into it."];
-
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"sign-out-failure-title", nil) message:NSLocalizedString(@"sign-out-failure-message", nil) preferredStyle:UIAlertControllerStyleAlert];
+       [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"alert-ok-action-title", nil) style:UIAlertActionStyleCancel handler:nil]];
+        
         [Navigator presentModally:alert];
     }];
 }
