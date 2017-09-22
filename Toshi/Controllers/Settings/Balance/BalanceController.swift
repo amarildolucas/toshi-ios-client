@@ -128,7 +128,7 @@ extension BalanceController: UITableViewDataSource {
                 cell.switchControl.isHidden = true
 
                 cell.titleWidthConstraint?.isActive = false
-                cell.titleLabel.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
+                cell.titleLabel.setContentCompressionResistancePriority(UILayoutPriority.required, for: .horizontal)
             }
 
             return cell

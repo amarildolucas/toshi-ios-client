@@ -210,8 +210,8 @@ final class ChatsInteractor: NSObject {
                 message.messageType = "Image"
             } else if let payment = SofaWrapper.wrapper(content: interaction.body ?? "") as? SofaPayment {
                 message.messageType = "Actionable"
-                message.attributedTitle = NSAttributedString(string: "Payment sent", attributes: [NSForegroundColorAttributeName: Theme.outgoingMessageTextColor, NSFontAttributeName: Theme.medium(size: 17)])
-                message.attributedSubtitle = NSAttributedString(string: EthereumConverter.balanceAttributedString(forWei: payment.value, exchangeRate: ExchangeRateClient.exchangeRate).string, attributes: [NSForegroundColorAttributeName: Theme.outgoingMessageTextColor, NSFontAttributeName: Theme.regular(size: 15)])
+                message.attributedTitle = NSAttributedString(string: "Payment sent", attributes: [NSAttributedStringKey.foregroundColor: Theme.outgoingMessageTextColor, NSAttributedStringKey.font: Theme.medium(size: 17)])
+                message.attributedSubtitle = NSAttributedString(string: EthereumConverter.balanceAttributedString(forWei: payment.value, exchangeRate: ExchangeRateClient.exchangeRate).string, attributes: [NSAttributedStringKey.foregroundColor: Theme.outgoingMessageTextColor, NSAttributedStringKey.font: Theme.regular(size: 15)])
             }
 
             return message
@@ -228,8 +228,8 @@ final class ChatsInteractor: NSObject {
             } else if let payment = sofaWrapper as? SofaPayment {
                 output?.didFinishRequest()
                 message.messageType = "Actionable"
-                message.attributedTitle = NSAttributedString(string: "Payment received", attributes: [NSForegroundColorAttributeName: Theme.incomingMessageTextColor, NSFontAttributeName: Theme.medium(size: 17)])
-                message.attributedSubtitle = NSAttributedString(string: EthereumConverter.balanceAttributedString(forWei: payment.value, exchangeRate: ExchangeRateClient.exchangeRate).string, attributes: [NSForegroundColorAttributeName: Theme.incomingMessageTextColor, NSFontAttributeName: Theme.regular(size: 15)])
+                message.attributedTitle = NSAttributedString(string: "Payment received", attributes: [NSAttributedStringKey.foregroundColor: Theme.incomingMessageTextColor, NSAttributedStringKey.font: Theme.medium(size: 17)])
+                message.attributedSubtitle = NSAttributedString(string: EthereumConverter.balanceAttributedString(forWei: payment.value, exchangeRate: ExchangeRateClient.exchangeRate).string, attributes: [NSAttributedStringKey.foregroundColor: Theme.incomingMessageTextColor, NSAttributedStringKey.font: Theme.regular(size: 15)])
             }
 
             return message

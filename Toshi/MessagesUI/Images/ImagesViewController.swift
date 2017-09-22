@@ -120,13 +120,13 @@ class ImagesViewController: UIViewController {
         dismissDelegate?.imagesAreDismissed(from: currentIndexPath)
     }
 
-    func done(_: UIBarButtonItem) {
+    @objc func done(_: UIBarButtonItem) {
         dismissDelegate?.imagesAreDismissed(from: currentIndexPath)
 
         dismiss(animated: true, completion: nil)
     }
 
-    func pan(_ gestureRecognizer: UIPanGestureRecognizer) {
+    @objc func pan(_ gestureRecognizer: UIPanGestureRecognizer) {
 
         switch gestureRecognizer.state {
         case .began:

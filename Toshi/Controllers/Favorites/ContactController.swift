@@ -264,7 +264,7 @@ public class ContactController: UIViewController {
         avatarImageView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 28).isActive = true
         avatarImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: marginHorizontal).isActive = true
 
-        nameLabel.setContentHuggingPriority(UILayoutPriorityRequired, for: .vertical)
+        nameLabel.setContentHuggingPriority(UILayoutPriority.required, for: .vertical)
         nameLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 22).isActive = true
         nameLabel.topAnchor.constraint(equalTo: avatarImageView.topAnchor).isActive = true
         nameLabel.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor, constant: marginHorizontal).isActive = true
@@ -380,7 +380,7 @@ public class ContactController: UIViewController {
         Navigator.presentModally(navigationController)
     }
 
-    func didTapRateUser() {
+    @objc func didTapRateUser() {
         presentUserRatingPrompt(contact: contact)
     }
 

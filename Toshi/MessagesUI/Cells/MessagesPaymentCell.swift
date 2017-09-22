@@ -164,11 +164,11 @@ class MessagesPaymentCell: MessagesBasicCell {
         setPaymentState(.none, for: .payment)
     }
 
-    func approvePayment(_: IconLabelButton) {
+    @objc func approvePayment(_: IconLabelButton) {
         selectionDelegate?.approvePayment(for: self)
     }
 
-    func declinePayment(_: IconLabelButton) {
+    @objc func declinePayment(_: IconLabelButton) {
         selectionDelegate?.declinePayment(for: self)
     }
 }

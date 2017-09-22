@@ -48,8 +48,8 @@ open class ProfileController: UIViewController {
 
     fileprivate lazy var editProfileButton: UIButton = {
         let view = UIButton(withAutoLayout: true)
-        view.setAttributedTitle(NSAttributedString(string: "Edit Profile", attributes: [NSFontAttributeName: Theme.regular(size: 17), NSForegroundColorAttributeName: Theme.tintColor]), for: .normal)
-        view.setAttributedTitle(NSAttributedString(string: "Edit Profile", attributes: [NSFontAttributeName: Theme.regular(size: 17), NSForegroundColorAttributeName: Theme.lightGreyTextColor]), for: .highlighted)
+        view.setAttributedTitle(NSAttributedString(string: "Edit Profile", attributes: [NSAttributedStringKey.font: Theme.regular(size: 17), NSAttributedStringKey.foregroundColor: Theme.tintColor]), for: .normal)
+        view.setAttributedTitle(NSAttributedString(string: "Edit Profile", attributes: [NSAttributedStringKey.font: Theme.regular(size: 17), NSAttributedStringKey.foregroundColor: Theme.lightGreyTextColor]), for: .highlighted)
         view.addTarget(self, action: #selector(didTapEditProfileButton), for: .touchUpInside)
 
         return view

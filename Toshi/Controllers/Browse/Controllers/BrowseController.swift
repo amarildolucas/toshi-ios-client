@@ -58,8 +58,8 @@ class BrowseController: SearchableCollectionController {
         return view
     }()
 
-    fileprivate lazy var openButtonAttributes: [String: Any] = {
-        return [NSForegroundColorAttributeName: Theme.tintColor, NSFontAttributeName: Theme.regular(size: 14)]
+    fileprivate lazy var openButtonAttributes: [NSAttributedStringKey: Any] = {
+        return [NSAttributedStringKey.foregroundColor: Theme.tintColor, NSAttributedStringKey.font: Theme.regular(size: 14)]
     }()
 
     fileprivate var openURLButtonTopAnchor: NSLayoutConstraint!

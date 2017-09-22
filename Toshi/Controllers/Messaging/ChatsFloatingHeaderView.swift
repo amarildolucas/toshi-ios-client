@@ -28,7 +28,7 @@ class ChatsFloatingHeaderView: UIView {
 
     private(set) lazy var fiatValueLabel: UILabel = {
         let label = UILabel(withAutoLayout: true)
-        label.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+        label.setContentHuggingPriority(UILayoutPriority.required, for: .horizontal)
         label.textColor = Theme.darkTextColor
         label.font = Theme.regular(size: 16)
 
@@ -51,7 +51,7 @@ class ChatsFloatingHeaderView: UIView {
         return button
     }
 
-    fileprivate var buttonAttributes: [String: Any] = [NSFontAttributeName: Theme.medium(size: 15), NSForegroundColorAttributeName: Theme.tintColor]
+    fileprivate var buttonAttributes: [NSAttributedStringKey: Any] = [NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): Theme.medium(size: 15), NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): Theme.tintColor]
 
     private(set) lazy var requestButton: UIButton = {
         let button = ChatsFloatingHeaderView.button()
@@ -139,11 +139,11 @@ class ChatsFloatingHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func request(button: UIButton) {
+    @objc func request(button: UIButton) {
         delegate?.messagesFloatingView(self, didPressRequestButton: button)
     }
 
-    func pay(button: UIButton) {
+    @objc func pay(button: UIButton) {
         delegate?.messagesFloatingView(self, didPressPayButton: button)
     }
 }

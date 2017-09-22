@@ -393,7 +393,7 @@ extension FavoritesController: Emptiable {
         return true
     }
 
-    func buttonPressed(sender _: AnyObject) {
+    @objc func buttonPressed(sender _: AnyObject) {
         let shareController = UIActivityViewController(activityItems: ["Get Toshi, available for iOS and Android! (https://www.toshi.org)"], applicationActivities: [])
 
         Navigator.presentModally(shareController)

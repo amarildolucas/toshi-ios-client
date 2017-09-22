@@ -10,8 +10,8 @@ final public class PaymentNavigationController: UINavigationController {
         navigationBar.shadowImage = UIImage()
         
         let titleTextAttributes = [
-            NSFontAttributeName: Theme.regular(size: 17),
-            NSForegroundColorAttributeName: Theme.darkTextColor
+            NSAttributedStringKey.font: Theme.regular(size: 17),
+            NSAttributedStringKey.foregroundColor: Theme.darkTextColor
         ]
         
         navigationBar.titleTextAttributes = titleTextAttributes

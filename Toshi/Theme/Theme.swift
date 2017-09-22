@@ -146,22 +146,22 @@ extension Theme {
     }
 
     static func light(size: CGFloat) -> UIFont {
-        return UIFont(name: "SFUIText-Light", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFontWeightLight)
+        return UIFont(name: "SFUIText-Light", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFont.Weight.light)
     }
 
     static func regular(size: CGFloat) -> UIFont {
-        return UIFont(name: "SFUIText-Regular", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFontWeightRegular)
+        return UIFont(name: "SFUIText-Regular", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFont.Weight.regular)
     }
 
     static func semibold(size: CGFloat) -> UIFont {
-        return UIFont(name: "SFUIText-Semibold", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFontWeightSemibold)
+        return UIFont(name: "SFUIText-Semibold", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFont.Weight.semibold)
     }
 
     static func bold(size: CGFloat) -> UIFont {
-        return UIFont(name: "SFUIText-Bold", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFontWeightBold)
+        return UIFont(name: "SFUIText-Bold", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFont.Weight.bold)
     }
 
     static func medium(size: CGFloat) -> UIFont {
-        return UIFont(name: "SFUIText-Medium", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFontWeightMedium)
+        return UIFont(name: "SFUIText-Medium", size: size) ?? UIFont.systemFont(ofSize: CGFloat(size), weight: UIFont.Weight.medium)
     }
 }

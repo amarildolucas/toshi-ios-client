@@ -120,7 +120,7 @@ class AlertController: ModalPresentable {
         return gestureRecognizer
     }()
 
-    func tap(_ gesture: UITapGestureRecognizer) {
+    @objc func tap(_ gesture: UITapGestureRecognizer) {
         if gesture.state == .recognized {
             dismiss(animated: true)
         }

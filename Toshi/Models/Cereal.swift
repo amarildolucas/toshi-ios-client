@@ -20,7 +20,7 @@ import HDWallet
 /// An EtherealCereal wrapper. Generates the address and public key for a given private key. Signs messages.
 public class Cereal: NSObject {
 
-    static var shared: Cereal = Cereal()
+    public static var shared: Cereal = Cereal()
 
     let entropyByteCount = 16
 

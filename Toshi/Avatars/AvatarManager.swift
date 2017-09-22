@@ -74,7 +74,7 @@ final class AvatarManager: NSObject {
         let operation = BlockOperation()
         operation.addExecutionBlock { [weak self] in
 
-            let avatarPaths = contactsManager.tokenContacts.flatMap { contact in
+            let avatarPaths: [String] = contactsManager.tokenContacts.flatMap { contact in
                 contact.avatarPath as String
             }
 

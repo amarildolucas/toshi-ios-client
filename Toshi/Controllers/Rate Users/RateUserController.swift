@@ -121,7 +121,7 @@ class RateUserController: ModalPresentable {
         return gestureRecognizer
     }()
 
-    func tap(_: UITapGestureRecognizer) {
+    @objc func tap(_: UITapGestureRecognizer) {
 
         if inputField.internalTextView.isFirstResponder {
             inputField.internalTextView.resignFirstResponder()
@@ -130,7 +130,7 @@ class RateUserController: ModalPresentable {
         }
     }
 
-    func press(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc func press(_ gestureRecognizer: UITapGestureRecognizer) {
 
         let locationInView = gestureRecognizer.location(in: gestureRecognizer.view)
         let margin = (RateUserController.contentWidth - ratingView.frame.width) / 2
@@ -201,12 +201,12 @@ class RateUserController: ModalPresentable {
         fatalError()
     }
 
-    func cancel(_: ActionButton) {
+    @objc func cancel(_: ActionButton) {
         inputField.internalTextView.resignFirstResponder()
         dismiss(animated: true)
     }
 
-    func submit(_: ActionButton) {
+    @objc func submit(_: ActionButton) {
         delegate?.didRate(user, rating: Int(rating), review: review)
     }
 
@@ -287,12 +287,12 @@ class RateUserController: ModalPresentable {
         reviewContainer.addGestureRecognizer(pressGesture)
     }
 
-    fileprivate dynamic func keyboardWillShow(_ notification: Notification) {
+    @objc fileprivate dynamic func keyboardWillShow(_ notification: Notification) {
         let info = KeyboardInfo(notification.userInfo)
         keyboardHeight = info.endFrame.height
     }
 
-    fileprivate dynamic func keyboardWillHide(_: Notification) {
+    @objc fileprivate dynamic func keyboardWillHide(_: Notification) {
         keyboardHeight = 0
     }
 }

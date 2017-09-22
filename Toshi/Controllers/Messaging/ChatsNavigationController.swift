@@ -50,21 +50,24 @@ public class ChatsNavigationController: UINavigationController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationBar.barStyle = .default
-        navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-
         guard #available(iOS 11.0, *) else {
+            navigationBar.barStyle = .default
+            navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+
             navigationBar.insertSubview(backgroundBlur, at: 0)
             backgroundBlur.edges(to: navigationBar, insets: UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0))
             return
         }
+
+        self.navigationBar.prefersLargeTitles = true
     }
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        if #available(iOS 11.0, *) {
+        guard #available(iOS 11.0, *) else {
             navigationBar.sendSubview(toBack: backgroundBlur)
+            return
         }
     }
 
