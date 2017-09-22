@@ -1776,6 +1776,9 @@
 		A963D5311F288E8900297FDF /* MessagesCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A963D52F1F288E5D00297FDF /* MessagesCornerView.swift */; };
 		A96B1ACB1F6AB12A0087754F /* PassphraseSignInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96B1ACA1F6AB12A0087754F /* PassphraseSignInCell.swift */; };
 		A96B1ACD1F6BBEF90087754F /* PassphraseSignInLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */; };
+		A98F14DF1F752CCC0045F83F /* PassphraseSignInExplanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F14DE1F752CCC0045F83F /* PassphraseSignInExplanation.swift */; };
+		A98F14E01F752CCF0045F83F /* PassphraseSignInExplanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F14DE1F752CCC0045F83F /* PassphraseSignInExplanation.swift */; };
+		A98F14E21F752CD00045F83F /* PassphraseSignInExplanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F14DE1F752CCC0045F83F /* PassphraseSignInExplanation.swift */; };
 		A997B0FE1EF94B4600A143FE /* AddMoneyBulletPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6B7C1EF7D746007C3206 /* AddMoneyBulletPoint.swift */; };
 		A997B0FF1EF94B4900A143FE /* AddMoneyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6B781EF7CEAD007C3206 /* AddMoneyController.swift */; };
 		A997B1001EF94B4C00A143FE /* AddMoneyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6B7A1EF7D582007C3206 /* AddMoneyHeader.swift */; };
@@ -2929,6 +2932,7 @@
 		A963D52F1F288E5D00297FDF /* MessagesCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesCornerView.swift; sourceTree = "<group>"; };
 		A96B1ACA1F6AB12A0087754F /* PassphraseSignInCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInCell.swift; sourceTree = "<group>"; };
 		A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInLayout.swift; sourceTree = "<group>"; };
+		A98F14DE1F752CCC0045F83F /* PassphraseSignInExplanation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseSignInExplanation.swift; sourceTree = "<group>"; };
 		A9AC74071E77E37500365029 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		A9AC740A1E77E62900365029 /* UIView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		A9AC740D1E78051F00365029 /* TitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
@@ -4579,6 +4583,7 @@
 			children = (
 				A9CDC4EA1F6C26C1000BFB9F /* DeletableTextField.swift */,
 				A96B1ACA1F6AB12A0087754F /* PassphraseSignInCell.swift */,
+				A98F14DE1F752CCC0045F83F /* PassphraseSignInExplanation.swift */,
 				A92BE9381F6E6E480054C7A4 /* PassphraseSignInFooterView.swift */,
 				A92BE9361F6E6E380054C7A4 /* PassphraseSignInHeaderView.swift */,
 				A96B1ACC1F6BBEF80087754F /* PassphraseSignInLayout.swift */,
@@ -5800,6 +5805,7 @@
 				9F4D80DB1EEA8B4500FB5361 /* MediaPickerGalleryVideoScrubberThumbnailView.m in Sources */,
 				149F9A8C1E72E29A00FB74AA /* FavoritesNavigationController.swift in Sources */,
 				2BC4084F1EF186000044C242 /* PaymentPresentable.swift in Sources */,
+				A98F14E21F752CD00045F83F /* PassphraseSignInExplanation.swift in Sources */,
 				2B10A4001F082CAC00E0F7DC /* ChatInteractor.swift in Sources */,
 				A9BF33B31E76F8D0009A51AA /* PassphraseEnableController.swift in Sources */,
 				9F4D7F391EEA8B4500FB5361 /* PhotoEditorValues.m in Sources */,
@@ -6002,6 +6008,7 @@
 				9F4D7ED61EEA8B4500FB5361 /* PhotoEditorItemController.m in Sources */,
 				9F4D80761EEA8B4500FB5361 /* StaticBackdropAreaData.m in Sources */,
 				9F4D7FB21EEA8B4500FB5361 /* GifConverter.m in Sources */,
+				A98F14DF1F752CCC0045F83F /* PassphraseSignInExplanation.swift in Sources */,
 				9F78D9CF1EE93E68003A0B95 /* ModalPresentationController.swift in Sources */,
 				9F4D807C1EEA8B4500FB5361 /* VideoMediaAttachment.m in Sources */,
 				9F4D81161EEA8B4600FB5361 /* ModernGalleryVideoItemView.m in Sources */,
@@ -6854,6 +6861,7 @@
 				A9603E841F4DABDC00BF57B1 /* MediaPickerGalleryVideoScrubberThumbnailView.m in Sources */,
 				A9603E851F4DABDC00BF57B1 /* FavoritesNavigationController.swift in Sources */,
 				A9603E861F4DABDC00BF57B1 /* PaymentPresentable.swift in Sources */,
+				A98F14E01F752CCF0045F83F /* PassphraseSignInExplanation.swift in Sources */,
 				A9603E871F4DABDC00BF57B1 /* ChatInteractor.swift in Sources */,
 				A9603E881F4DABDC00BF57B1 /* PassphraseEnableController.swift in Sources */,
 				A9603E891F4DABDC00BF57B1 /* PhotoEditorValues.m in Sources */,

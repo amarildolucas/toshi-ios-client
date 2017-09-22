@@ -47,7 +47,13 @@ final class PassphraseSignInViewController: UIViewController {
             self.signInView?.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .top)
         }
 
+        signInView?.footerView.explanationButton.addTarget(self, action: #selector(showExplanation(_:)), for: .touchUpInside)
         signInView?.footerView.signInButton.addTarget(self, action: #selector(signIn(_:)), for: .touchUpInside)
+    }
+    
+    func showExplanation(_ button: UIButton) {
+        let explanationViewController = PassphraseSignInExplanationViewController()
+        navigationController?.pushViewController(explanationViewController, animated: true)
     }
 
     func signIn(_ button: ActionButton) {

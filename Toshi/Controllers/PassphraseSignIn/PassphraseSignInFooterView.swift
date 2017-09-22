@@ -18,7 +18,7 @@ class PassphraseSignInFooterView: UIView {
         return view
     }()
 
-    private lazy var explanationButton: UIButton = {
+    private(set) lazy var explanationButton: UIButton = {
         let view = UIButton()
         view.setTitle(Localized("passphrase_sign_in_explanation_title"), for: .normal)
         view.setTitleColor(Theme.greyTextColor, for: .normal)
