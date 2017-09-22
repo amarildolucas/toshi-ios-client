@@ -3,13 +3,13 @@ import UIKit
 import TinyConstraints
 
 final class PassphraseSignInViewController: UIViewController {
-    
-    var signInView: PassphraseSignInView? { return view as? PassphraseSignInView }
-    var typed: [String] = [""]
-    var itemCount: Int = 1
+
+    fileprivate var signInView: PassphraseSignInView? { return view as? PassphraseSignInView }
+    fileprivate var typed: [String] = [""]
+    fileprivate var itemCount: Int = 1
     static let maxItemCount: Int = 12
-    var didJustAccept = false
-    
+    fileprivate var didJustAccept = false
+
     var activeIndexPath: IndexPath? {
         if let selectedCell = signInView?.collectionView.visibleCells.first(where: { $0.isSelected }) {
             return signInView?.collectionView.indexPath(for: selectedCell)
