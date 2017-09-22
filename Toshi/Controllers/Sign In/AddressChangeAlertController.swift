@@ -59,8 +59,8 @@ final class AddressChangeAlertController: AlertController {
 
         view.backgroundColor = UIColor.clear
 
-        contentView.backgroundColor = Theme.viewBackgroundColor
-        contentView.widthAnchor.constraint(equalToConstant: 270.0).isActive = true
+        visualEffectView.backgroundColor = Theme.viewBackgroundColor
+        visualEffectView.widthAnchor.constraint(equalToConstant: 270.0).isActive = true
 
         content.addSubview(titleLabel)
         titleLabel.set(height: 27.0)

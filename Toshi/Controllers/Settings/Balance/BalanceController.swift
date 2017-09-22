@@ -116,7 +116,6 @@ extension BalanceController: UITableViewDataSource {
         case 0:
             let cell = tableView.dequeue(InputCell.self, for: indexPath)
             if let balance = balance {
-
                 cell.selectionStyle = .none
 
                 let ethereumValueString = EthereumConverter.ethereumValueString(forWei: balance)
