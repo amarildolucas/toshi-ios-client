@@ -25,6 +25,7 @@ public extension Array {
 }
 
 open class FavoritesController: SweetTableController {
+    var bottomConstraint: NSLayoutConstraint?
 
     fileprivate lazy var mappings: YapDatabaseViewMappings = {
         let mappings = YapDatabaseViewMappings(groups: [TokenUser.favoritesCollectionKey], view: TokenUser.viewExtensionName)
@@ -93,9 +94,34 @@ open class FavoritesController: SweetTableController {
             setupForCurrentUserNotifications()
         }
 
-        NotificationCenter.default.addObserver(self, selector: #selector(userCreated(_:)), name: .userCreated, object: nil)
-
         title = "Favorites"
+
+        registerNotifications()
+    }
+
+    fileprivate func registerNotifications() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(userCreated(_:)), name: .userCreated, object: nil)
+
+        notificationCenter.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.keyboardDidHide), name: .UIKeyboardDidHide, object: nil)
+    }
+
+    func keyboardWillShow(_ notification: Notification) {
+        guard let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue  else { return }
+        
+        let keyboardRectangle = keyboardFrame.cgRectValue
+        let keyboardHeight = keyboardRectangle.height
+
+        let tabBarControllerHeight = self.tabBarController?.tabBar.frame.height ?? 0.0
+        bottomConstraint?.constant = -(keyboardHeight - tabBarControllerHeight)
+
+        view.updateConstraints()
+    }
+
+    func keyboardDidHide() {
+        bottomConstraint?.constant = 0
+        view.updateConstraints()
     }
 
     @objc fileprivate func userCreated(_ notification: Notification) {
@@ -171,8 +197,17 @@ open class FavoritesController: SweetTableController {
     }
 
     fileprivate func addSubviewsAndConstraints() {
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        bottomConstraint = tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+
+        bottomConstraint?.isActive = true
+
         view.addSubview(emptyStateContainerView)
+
         let topSpace: CGFloat = (navigationController?.navigationBar.frame.height ?? 0.0) + searchController.searchBar.frame.height + UIApplication.shared.statusBarFrame.height
+
         emptyStateContainerView.set(height: view.frame.height - topSpace)
         emptyStateContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         emptyStateContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -433,11 +468,9 @@ extension FavoritesController: UITableViewDataSource {
 
 extension FavoritesController: UITableViewDelegate {
 
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ContactCell.height
     }
-
-
 
     public func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.searchController.searchBar.resignFirstResponder()
