@@ -266,6 +266,10 @@ final class ChatController: OverlayController {
 
         viewModel.thread.markAllAsRead()
         SignalNotificationManager.updateApplicationBadgeNumber()
+
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
     }
 
     fileprivate func updateBalance() {

@@ -1,3 +1,4 @@
+
 // Copyright (c) 2017 Token Browser, Inc
 //
 // This program is free software: you can redistribute it and/or modify
@@ -221,6 +222,17 @@ public class ContactController: UIViewController {
         }
 
         updateButton()
+
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = false
+        }
+    }
+
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
     }
 
     public override func viewDidLayoutSubviews() {
