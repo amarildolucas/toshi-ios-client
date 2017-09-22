@@ -94,7 +94,12 @@ final class PassphraseSignInViewController: UIViewController {
         
         if itemCount == PassphraseSignInViewController.maxItemCount, let activeIndexPath = activeIndexPath {
             signInView?.collectionView.deselectItem(at: activeIndexPath, animated: false)
-            
+            cleanUp(after: IndexPath(item: PassphraseSignInViewController.maxItemCount, section: 0), completion: { [weak self] _ in
+                
+                if let itemCount = self?.itemCount, itemCount < PassphraseSignInViewController.maxItemCount {
+                    self?.acceptItem(at: IndexPath(item: PassphraseSignInViewController.maxItemCount, section: 0))
+                }
+            })
             return
         }
         
