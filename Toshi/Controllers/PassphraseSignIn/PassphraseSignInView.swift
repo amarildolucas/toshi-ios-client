@@ -42,7 +42,7 @@ final class PassphraseSignInView: UIView {
     private var collectionViewHeightConstraint: NSLayoutConstraint?
     
     private lazy var headerView: PassphraseSignInHeaderView = PassphraseSignInHeaderView()
-    private lazy var footerView: PassphraseSignInFooterView = PassphraseSignInFooterView()
+    private(set) lazy var footerView: PassphraseSignInFooterView = PassphraseSignInFooterView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
