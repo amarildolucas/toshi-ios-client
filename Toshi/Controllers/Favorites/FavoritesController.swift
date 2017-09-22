@@ -433,9 +433,11 @@ extension FavoritesController: UITableViewDataSource {
 
 extension FavoritesController: UITableViewDelegate {
 
-    public func tableView(_: UITableView, estimatedHeightForRowAt _: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        return ContactCell.height
     }
+
+
 
     public func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.searchController.searchBar.resignFirstResponder()

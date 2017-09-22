@@ -17,6 +17,8 @@ import UIKit
 
 /// Displays user's contacts.
 class ContactCell: UITableViewCell {
+    static let height: CGFloat = 80.0
+
     var contact: TokenUser? {
         didSet {
             if let contact = self.contact {
@@ -94,7 +96,7 @@ class ContactCell: UITableViewCell {
 
         let margin: CGFloat = 16.0
         let interLabelMargin: CGFloat = 6.0
-        let imageSize: CGFloat = 44.0
+        let imageSize: CGFloat = 48.0
         let height: CGFloat = 24.0
 
         avatarImageView.set(height: imageSize)
@@ -114,9 +116,9 @@ class ContactCell: UITableViewCell {
         usernameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -margin).isActive = true
 
         separatorView.set(height: Theme.borderHeight)
-        separatorView.leftAnchor.constraint(equalTo: avatarImageView.rightAnchor).isActive = true
+        separatorView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: margin).isActive = true
         separatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        separatorView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+        separatorView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -margin).isActive = true
     }
 
     required init?(coder _: NSCoder) {
